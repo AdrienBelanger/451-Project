@@ -1,0 +1,72 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{tikz} % for timeline
+\usepackage{titling} % to make title higher
+
+\setlength{\droptitle}{-1in}
+\title{
+  Project Proposal \\
+  \Large Comp 451}
+
+\author{Ping-Chieh Tu, Adrien Bélanger, Inigo ??}
+\date{November 3$^{\text{rd}}$ 2024}
+
+\begin{document}
+
+\maketitle 
+% No space for the section names, its basically a text with paragraphs so no need
+
+\begin{enumerate}
+    \item Background, motivation and Project Thesis (Oscar and All)
+    
+    This project compares several related models and approaches to predict market crashes using market data.
+    
+    \item Objectives and Success Criteria (Adrien)
+    
+        Objectives (will write them more thoroughly):
+        \begin{itemize}
+            \item [-] Find and correctly implement commonly used models for Time Series Analysis
+            \item[-] Run and Analyze Results on the same dataset and objective
+            \item[-] Compare the results of each model and discuss their strengths and weaknesses
+            \item[-]  Conclude the most favorable approach indicated by our results and compare with literature
+        \end{itemize} 
+        Success Criteria
+        \begin{itemize}
+            \item [-] Placeholder
+        \end{itemize}
+        
+    \item Project Plan and timeline (Adrien and All)
+        
+        Project plan (Draft)
+        \begin{itemize}
+            \item [-] Literature Review
+            \item [-] Implementation of models and training
+            \item [-] Analysis, Final Report and presentation work
+        \end{itemize}
+    
+        Timeline
+        
+        \begin{tikzpicture}[every node/.style={align=center, font =\small}]
+          \draw[->] (0,0) -- (14,0);
+        
+          \foreach \x/\y/\label in {
+            2/{Literature\\Review}/8th of November,
+            7/{Implementation of \\ models and training}/Mid November,
+            12/{Analysis, Final Report \\ and Presentation}/End of November
+          } {
+            \draw (\x,0) node[above=5pt] {\y} node[below=5pt] {\label};
+          }
+        \end{tikzpicture}    
+        
+    \item Discussing some datasets and how we will implement our project (platform, etc) (Inigo)
+
+
+
+
+
+    
+\end{enumerate}
+
+
+\end{document}
