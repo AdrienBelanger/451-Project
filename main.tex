@@ -1,4 +1,4 @@
-\documentclass[10pt, letterpaper]{article}
+\documentclass[12pt, letterpaper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{tikz} % for timeline
@@ -20,38 +20,47 @@
 % No space for the section names, its basically a text with paragraphs so no need
 
 \begin{enumerate}
-    \item Background, motivation and Project Thesis (Oscar and All)
+    \item [] \textbf{Background, motivation and Project Thesis}
 
     There have been several crashes in the market history. They also come with severe consequences. In 1929, one of the biggest market crashes in history came before the largest worldwide economic crisis in history. When the market crashes, individual investors often lose money by panic selling which will cause more crashes. Nowadays, machine learning can help statisticians and economists predict market crashes and prevent them from happening.
 
-    Normally in the market, we say that there is a crash when is a decline of 20$\%$ or more in a major market index from its recent peak over a short period. We will use this as an indicator to predict market crashed.
-
-    % TODO: Which model to use
-    In this project, we will learn and use:
-    \begin{enumerate}[label=\arabic*.]
-      \item Logistic Regression + Decision Tree + Neural Network % Maybe?
-      \item Autoregressive Model
-      \item Moving Average Model
-      \item Autoregressive Moving Integrated Average Model (ARIMA)
-    \end{enumerate}
-    We will see how these model works and compare their result by
-    \begin{enumerate}[label=\arabic*.]
-      \item Accuracy
-      \item Efficiency
-    \end{enumerate}
+    For this project, we will define a crash as when there is a decline of 20$\%$ or more in a major market index from its recent peak over a short period. We will use this as an indicator to predict market crashed. This is commonly used in litterature.
     
+   
+
+    % TODO: Which model to use. Commenting this out to put it in the objectives as discussed
+    %In this project, we will learn and use:
+    %\begin{enumerate}[label=\arabic*.]
+     % \item Logistic Regression + Decision Tree + Neural Network % Maybe? ADrien: I think we can do just ARIMA without moving average.
+      %\item Autoregressive Model
+      %\item Moving Average Model
+      %\item Autoregressive Moving Integrated Average Model (ARIMA)
+    %\end{enumerate}
+    %We will see how these model works and compare their result by
+    %\begin{enumerate}[label=\arabic*.]
+    %  \item Accuracy
+    %  \item Efficiency
+   % \end{enumerate}
+
     This project aims to compare several commonly used models to predict market crashes using market data.
     
-    \item Objectives and Success Criteria (Adrien)
-    
-        Objectives
+    \item [] \textbf{Objectives }
         \begin{itemize}
             \item[-] Find and correctly implement commonly used models for Time Series Analysis in our context
+              \begin{itemize}
+              \item [a.]Logistic regression + Decision Tree + Neural Network
+              \item [b.]Moving Average Model
+              \item [c.]Autoregressive Moving Integrated Average Model (ARIMA)
+              \end{itemize}
             \item[-] Run and Analyze Results on the multiple scenarios across all models
-            \item[-] Compare the results of each model and discuss their strengths and weaknesses
+            \item[-] Compare the results of each model and discuss their strengths and weaknesses. We will compare the models based on their
+              \begin{itemize}
+                \item [a.] Accuracy
+                \item [b.] Efficiency
+              \end{itemize}
             \item[-] Conclude the most favorable approach indicated by our results and compare with literature
         \end{itemize} 
-        Success Criteria
+    \item [] \textbf{Success Criteria}
         \begin{itemize}
             \item [-] Implement the models correctly so the empirical comparison between models depends on their strength and not their
             \item [-] All models should achieve at least the expectation of them found in literature
@@ -59,16 +68,14 @@
             \item [-] Our final report should adequately compare our methods and results with the ones found in literature
         \end{itemize}
         
-    \item Project Plan and timeline (Adrien and All)
-        
-        Project plan
+    \item [] \textbf{Project Plan} %and timeline (Adrien and All)
         \begin{itemize}
             \item [-] Literature Review: Find models and datasets with which we can work, gather their expected performance and their original implementation
             \item [-] Implementation of models and training: Implement each model to at least the satisfaction outlined in our Success Criteria
             \item [-] Analysis, Final Report and presentation
         \end{itemize}
     
-        Timeline
+    \item [] \textbf{Timeline}
         
         \begin{tikzpicture}[every node/.style={align=center, font =\small}]
           \draw[->] (0,0) -- (14,0);
@@ -83,7 +90,10 @@
           }
         \end{tikzpicture}    
         
-    \item Discussing some datasets and how we will implement our project (platform, etc) (Inigo)
+    \item [] \textbf{Implementation} %Discussing some datasets and how we will implement our project (platform, etc) (Inigo)
+
+    
+
 
     To implement our project, we will use a variety of historical financial datasets, including stock prices, trading volumes, and volatility indices. Sources such as \textbf{Yahoo Finance}, which provides comprehensive stock market data and historical prices; \textbf{Quandl}, offering a wide range of financial, economic, and alternative datasets; and the \textbf{World Bank Open Data}, which supplies extensive macroeconomic time series and global financial statistics, provide extensive repositories of financial time series data suitable for our analysis. Additionally, we may go beyond numerical data by incorporating sentiment analysis on articles and social media metadata to enrich our dataset. This qualitative data is highly regarded in the finance industry for predicting market crashes.
 
@@ -91,11 +101,10 @@ Our primary approach involves developing a model that mainly combines Logistic R
 
 We will use Python libraries such as \texttt{pandas} and \texttt{NumPy} for data manipulation and preprocessing. We will leverage machine learning frameworks like \texttt{TensorFlow} and \texttt{scikit-learn} for model development and training. Regarding computational resources, if needed, we will utilize cloud-based platforms like \textbf{Google Colab} or \textbf{AWS EC2 instances} for training complex models on extremely large datasets. 
 
-(feel free to modify anything you want)
+%(feel free to modify anything you want)
 
-(let me know if it is too long, I prefer to write more and then, if needed, remove things at the end)
+%(let me know if it is too long, I prefer to write more and then, if needed, remove things at the end)
 
-(with font size 10pt, the document is 2 pages long)
     
 
 
