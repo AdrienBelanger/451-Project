@@ -19,8 +19,8 @@
 \maketitle 
 % No space for the section names, its basically a text with paragraphs so no need
 
-\begin{enumerate}
-    \item [] \textbf{Background, motivation and Project Thesis}
+\begin{enumerate}[label=]
+    \item \textbf{Background, motivation and Project Thesis}
 
     There have been several crashes in the market history. They also come with severe consequences. In 1929, one of the biggest market crashes in history came before the largest worldwide economic crisis in history. When the market crashes, individual investors often lose money by panic selling which will cause more crashes. Nowadays, machine learning can help statisticians and economists predict market crashes and prevent them from happening.
 
@@ -44,38 +44,38 @@
 
     This project aims to compare several commonly used models to predict market crashes using market data.
     
-    \item [] \textbf{Objectives }
+    \item \textbf{Objectives }
         \begin{itemize}
             \item[-] Find and correctly implement commonly used models for Time Series Analysis in our context
-              \begin{itemize}
-              \item [a.]Linear Regression
-              \item [b.]Logistic regression, Decision Tree and Neural Network
-              \item [c.]Autoregressive Moving Integrated Average Model (ARIMA)
-              \end{itemize}
+              \begin{enumerate}[label=\alph*.]
+              \item Linear Regression
+              \item Logistic regression, Decision Tree and Neural Network
+              \item Autoregressive Moving Integrated Average Model (ARIMA)
+              \end{enumerate}
             \item[-] Run and Analyze Results on the multiple scenarios across all models
             \item[-] Compare the results of each model and discuss their strengths and weaknesses. We will compare the models based on their
-              \begin{itemize}
-                \item [a.] Accuracy
-                \item [b.] Efficiency
-              \end{itemize}
+              \begin{enumerate}[label=\alph*.]
+                \item Accuracy
+                \item Efficiency
+              \end{enumerate}
             \item[-] Conclude the most favorable approach indicated by our results and compare with literature
         \end{itemize} 
-    \item [] \textbf{Success Criteria}
-        \begin{itemize}
-            \item [-] Implement the models correctly so the empirical comparison between models depends on their strength and not their
-            \item [-] All models should achieve at least the expectation of them found in literature
-            \item [-] Comparison of the models should show their strengths and weaknesses in different scenarios
-            \item [-] Our final report should adequately compare our methods and results with the ones found in literature
-        \end{itemize}
+    \item \textbf{Success Criteria}
+        \begin{enumerate}[label=-]
+            \item Implement the models correctly so the empirical comparison between models depends on their strength and not their
+            \item All models should achieve at least the expectation of them found in literature
+            \item Comparison of the models should show their strengths and weaknesses in different scenarios
+            \item Our final report should adequately compare our methods and results with the ones found in literature
+        \end{enumerate} 
         
-    \item [] \textbf{Project Plan} %and timeline (Adrien and All)
-        \begin{itemize}
-            \item [-] Literature Review: Find models and datasets with which we can work, gather their expected performance and their original implementation
-            \item [-] Implementation of models and training: Implement each model to at least the satisfaction outlined in our Success Criteria
-            \item [-] Analysis, Final Report and presentation
-        \end{itemize}
+    \item \textbf{Project Plan} %and timeline (Adrien and All)
+        \begin{enumerate}[label=-]
+            \item Literature Review: Find models and datasets with which we can work, gather their expected performance and their original implementation
+            \item Implementation of models and training: Implement each model to at least the satisfaction outlined in our Success Criteria
+            \item Analysis, Final Report and presentation
+        \end{enumerate}
     
-    \item [] \textbf{Timeline}
+    \item \textbf{Timeline}
         
         \begin{tikzpicture}[every node/.style={align=center, font =\small}]
           \draw[->] (0,0) -- (14,0);
@@ -90,7 +90,7 @@
           }
         \end{tikzpicture}    
         
-    \item [] \textbf{Implementation} %Discussing some datasets and how we will implement our project (platform, etc) (Inigo)
+    \item \textbf{Implementation} %Discussing some datasets and how we will implement our project (platform, etc) (Inigo)
 
     
 
