@@ -22,26 +22,10 @@
 \begin{enumerate}[label=]
     \item \textbf{Background, motivation and Project Thesis}
 
-    There have been several crashes in the market history. They also come with severe consequences. In 1929, one of the biggest market crashes in history came before the largest worldwide economic crisis in history. When the market crashes, individual investors often lose money by panic selling which will cause more crashes. Nowadays, machine learning can help statisticians and economists predict market crashes and prevent them from happening.
+    There have been several crashes in the market history. They also come with severe consequences. In 1929, one of the biggest market crashes in history came before the largest worldwide economic crisis in history. When the market crashes, individual investors often lose money by panic selling which will cause more crashes. Nowadays, machine learning can help statisticians and economists predict market crashes and prevent them from happening. In this project, we will see different methods that are used to predict time series.
 
     For this project, we will define a crash as when there is a decline of 20$\%$ or more in a major market index from its recent peak over a short period. We will use this as an indicator to predict market crashed. This is commonly used in litterature.
     
-   
-
-    % TODO: Which model to use. Commenting this out to put it in the objectives as discussed
-    %In this project, we will learn and use:
-    %\begin{enumerate}[label=\arabic*.]
-     % \item Logistic Regression + Decision Tree + Neural Network % Maybe? ADrien: I think we can do just ARIMA without moving average.
-      %\item Autoregressive Model
-      %\item Moving Average Model
-      %\item Autoregressive Moving Integrated Average Model (ARIMA)
-    %\end{enumerate}
-    %We will see how these model works and compare their result by
-    %\begin{enumerate}[label=\arabic*.]
-    %  \item Accuracy
-    %  \item Efficiency
-   % \end{enumerate}
-
     This project aims to compare several commonly used models to predict market crashes using market data.
     
     \item \textbf{Objectives }
@@ -52,6 +36,7 @@
               \item Logistic regression, Decision Tree and Neural Network
               \item Autoregressive Moving Integrated Average Model (ARIMA)
               \end{enumerate}
+              Although Linear Regression might not do well in predicting time series, we wish to see how it will perform.
             \item[-] Run and Analyze Results on the multiple scenarios across all models
             \item[-] Compare the results of each model and discuss their strengths and weaknesses. We will compare the models based on their
               \begin{enumerate}[label=\alph*.]
