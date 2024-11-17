@@ -3,19 +3,68 @@
 \usepackage{amsmath}
 \usepackage{tikz} % for timeline
 \usepackage{titling} % to make title higher
-
 \usepackage{enumitem}
+\usepackage{ragged2e} % justification
 
-\setlength{\droptitle}{-1.2in}
-\title{\Large Project Litterature Review: Comparing Methods and Models used to predict Financial Market Crashes using Market Data\\}
-\author{Ping-Chieh Tu, Adrien Bélanger, Inigo Torres}
-\date{Due November 22$^{\text{nd}}$ 2024}
+\setlength{\droptitle}{-1.2in} % Adjusts title placement on the page
+\pretitle{\vspace{0em}\begin{center}\Large} % Adjusts spacing before the title
+\posttitle{\par\end{center}\vspace{-1.25em}} % Adjusts spacing after the title
+\preauthor{\vspace{0em}\begin{center}} % Adjusts spacing before the author block
+\postauthor{\par\end{center}\vspace{-1.5em}} 
+\predate{\vspace{0em}\begin{center}} % Adjusts spacing before the date
+\postdate{\par\end{center}\vspace{-0.5em}} % Adjusts spacing after the date
+
+
+\title{Empirical Review of Models used for Predicting Financial Market Crashes Using Market Data}
+\author{\large Project: Literature Review \vspace{0.75em} \\ \normalsize By Ping-Chieh Tu, Adrien Bélanger, and Inigo Torres}
+\date{November 22$^{\text{nd}}$ 2024}
 
 \begin{document}
 
 \maketitle 
 
+\justifying % justifying our text instead of the annoying list like last time
 
+Overall objective to keep in mind:
+
+"In this milestone, the objective is to review the related literature to your proposal. This will better inform your methodology for your project if it involves a new idea, and it is necessary if you are comparing existing methods for a certain domain. It may even lead to a change of proposal, once you learn about existing methods out there. If you are producing a literature survey on a research topic, in this stage, you just provide a "breadth" review, in which you emphasize covering as many related works as possible and providing some preliminary organization without going into much detail."
+
+
+
+
+\subsection*{Introduction}
+"Start with a broad picture of the research area in order to position your work. It is important to demonstrate perspective."
+
+\subsection*{Background on Time Series and Financial Market Crashes}
+
+- Define time series in financial analysis
+
+- Explain market crashes and justify our definition
+
+- Review work on financial crash prediction, review different methods
+
+- Identify gaps in literature that our project adresses and what is new about it
+
+\subsection*{Review of Relevant Models and Methods}
+- Justify why we chose those three models by finding similar work
+    \subsubsection*{Arima}
+    - Overview of ARIMA 
+
+    - Review its application in time series analysis in our context
+    \subsubsection*{Reccurent Neural Networks}
+    - Overview of Recurrent Neural Networks (RNNs)
+
+    - Review its application in time series analysis in our context
+    \subsubsection*{Transformers}
+    - Overview of Transformers
+
+    - Review its application in time series analysis in our context
+
+
+\subsection*{Criterias and Analysis}
+- Summarize criterias and metrics in literature for comparing models.
+
+- Justify the selection of those comparison methods based on sources
 
 
 \end{document}
