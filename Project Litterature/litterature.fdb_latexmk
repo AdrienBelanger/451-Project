@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1731884540.34505 "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1731884541.19056 0
-  "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" 1731884540.10289 2896 eae5987ecddd831e2020a0526a87caed ""
+["pdflatex"] 1731951635.4699 "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1731951636.32612 0
+  "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" 1731951634.27979 3151 4eaaeb78435fd42707b3c0b9a3d69b20 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -112,8 +112,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730164663.25961 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730164550 8221428 c019502a42a6718531fa8089a6a429eb ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "litterature.aux" 1731884541.11829 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "litterature.tex" 1731884540.10289 2896 eae5987ecddd831e2020a0526a87caed ""
+  "litterature.aux" 1731951636.25301 44 360cd8785e73a74762ca56758c3aabe4 "pdflatex"
+  "litterature.tex" 1731951634.27979 3151 4eaaeb78435fd42707b3c0b9a3d69b20 ""
   (generated)
   "litterature.aux"
   "litterature.log"
