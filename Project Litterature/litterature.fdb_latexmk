@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1731951635.4699 "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1731951636.32612 0
-  "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" 1731951634.27979 3151 4eaaeb78435fd42707b3c0b9a3d69b20 ""
+["pdflatex"] 1732034860.71674 "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1732034861.57837 0
+  "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" 1732034860.41778 5163 232ce55cf8d8eb0f700a7f590e67188c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -82,6 +82,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty" 1686341992 2444 0d0c1ee65478277e8015d65b86983da2 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls" 1705352648 20144 147463a6a579f4597269ef9565205cfe ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo" 1705352648 8449 f07039d8e4e89f21078d9b5137579bfc ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/comment/comment.sty" 1472166125 10197 204f75d5d8d88aa345a8c402e879e63b ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty" 1561238569 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
@@ -112,8 +113,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730164663.25961 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730164550 8221428 c019502a42a6718531fa8089a6a429eb ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "litterature.aux" 1731951636.25301 44 360cd8785e73a74762ca56758c3aabe4 "pdflatex"
-  "litterature.tex" 1731951634.27979 3151 4eaaeb78435fd42707b3c0b9a3d69b20 ""
+  "litterature.aux" 1732034861.50614 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "litterature.tex" 1732034860.41778 5163 232ce55cf8d8eb0f700a7f590e67188c ""
   (generated)
   "litterature.aux"
   "litterature.log"
