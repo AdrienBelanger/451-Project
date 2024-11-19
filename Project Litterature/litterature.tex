@@ -72,9 +72,12 @@ Before we run into why we choose the below three models for predicting time seri
 
     %- Review its application in time series analysis in our context
     \subsubsection*{Transformers \textcolor{red}{Inigo}}
-    - Overview of Transformers
+Transformers are neural network architectures that are based on "self-attention mechanisms" (allowing the model to weigh the importance of different elements in the input by computing attention scores between all positions) to model dependencies in sequential data. while Transofrmers were originally developped for natural language processing tasks like machine translation [Vaswani et al., "Attention is All You Need"], they have become popular for time series forecasting due to their ability to handle long-range dependencies.
 
-    - Review its application in time series analysis in our context
+Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in fluctuative/volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention [Zhou et al., "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"]. Moreover, Lim et al.  were evn able to outperform traditional methods by combining Transformer architecture with recurrent layers [Lim et al., "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting"].
+
+Hence, the litteratrue suggest that Tranformers are a pertinent choice for identifying complex patterns in finatial time series, as they can model dependencies accros mutiple time sclaes, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
+
 
 
 \subsection*{Criterias and Analysis \textcolor{red}{Oscar?}}
