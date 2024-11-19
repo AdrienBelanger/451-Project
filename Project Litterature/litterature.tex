@@ -39,12 +39,12 @@ Evaluation Criterias:
 We are not the first to approach this subject. 
 Multiple papers have approached prediction of stock market crashes using Machine Learning. 
 Some have used Support Vector Machines, random forests, and others Neural Networks [Okpeke, Predicting Stock Market]. 
-In a time series analysis approach, models used have traditionnally included RNNs and Arima, and more recently Transformers. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
+In a time series analysis approach, models used have traditionnally included RNNs and ARIMA, and more recently Transformers. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
 These models have been used in Market Crash prediction [Okpeke]. 
 Others have tried using diverse databases and models such as Social Media interactions [Chhajer, The Applications.. ] using Natural Language Processing. As this is a very economically valuable foresight, a lot of research has been done on the subject.
 
 
-Reviews and comparisons of these models, such as this project aims to do, have been made such as [Okpeke, Predicting], but a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in litterature. 
+Reviews and comparisons of these models, such as this project aims to do, have been made such as [Okpeke, Predicting], but a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in literature. 
 This project aims to address this lack, by providing an empirical comparison of three commonly used models in Time-Series Analysis (Arima models, RNNs and Transformers) to predict Market Crashes. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
 We shall use data freely available on the Yahoo finance database, and tag historically factual Market Crashes by hand, as there are only few. We shall use the crashes as listed in []. This methodology (or closely related) is common procedure, and has been used for this in the past [][]. Specific Criterias for comparison and analysis shall be discussed in a further section.
 
@@ -59,11 +59,11 @@ We shall use data freely available on the Yahoo finance database, and tag histor
 % - Identify gaps in literature that our project adresses and what is new about it
 
 \subsection*{Methodology}
-Before we run into why we choose the below three models for predicting time series, we should first look at how time series are analyzed. 
+When first looking at a time series, we need to know that whether there it is \textbf{stationary} or \textbf{non-stationary}, which means 
 
 - Justify why we chose those three models by finding similar work \textcolor{red}{Oscar ?} This might be good: https://oarjst.com/sites/default/files/OARJST-2024-0095.pdf
-    \subsubsection*{Arima \textcolor{red}{Oscar}}
-    Autoregressive Integrated Moving Average 
+    \subsubsection*{ARIMA \textcolor{red}{Oscar}}
+    Autoregressive Integrated Moving Average model combines autoregression model and moving average model. It is a models that used in time series to make prediction
 
     - Review its application in time series analysis in our context
     \subsubsection*{Reccurent Neural Networks \textcolor{red}{Adrien}}
@@ -74,9 +74,9 @@ Before we run into why we choose the below three models for predicting time seri
     \subsubsection*{Transformers \textcolor{red}{Inigo}}
 Transformers are neural network architectures that are based on "self-attention mechanisms" (allowing the model to weigh the importance of different elements in the input by computing attention scores between all positions) to model dependencies in sequential data. while Transofrmers were originally developped for natural language processing tasks like machine translation [Vaswani et al., "Attention is All You Need"], they have become popular for time series forecasting due to their ability to handle long-range dependencies.
 
-Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in fluctuative/volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention [Zhou et al., "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"]. Moreover, Lim et al.  were evn able to outperform traditional methods by combining Transformer architecture with recurrent layers [Lim et al., "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting"].
+Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in fluctuative/volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention [Zhou et al., "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"]. Moreover, Lim et al. were even able to outperform traditional methods by combining Transformer architecture with recurrent layers [Lim et al., "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting"].
 
-Hence, the litteratrue suggest that Tranformers are a pertinent choice for identifying complex patterns in finatial time series, as they can model dependencies accros mutiple time sclaes, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
+Hence, the literature suggest that Tranformers are a pertinent choice for identifying complex patterns in finatial time series, as they can model dependencies accros mutiple time sclaes, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
 
 
 
