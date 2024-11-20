@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+Project Proposal/proposal.log
+=======
 *.aux
 *.fdb_latexmk
 *.fls
 *.log
 *.pdf
 *.synctex.gz
+>>>>>>> 070b40d9425c7fd60a3f58c5d8739e54be83cdc1
