@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1732060416 "c:/Users/oscar/McGill University/Fall 2024/COMP 451 Fundamentals of Machine Learning/Project/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1732060417 0
-  "c:/Users/oscar/McGill University/Fall 2024/COMP 451 Fundamentals of Machine Learning/Project/451-Project/Project Litterature/litterature.tex" 1732060414 6924 edf2c331a8070a42cb74822df3da8a75 ""
+["pdflatex"] 1732060457 "c:/Users/oscar/McGill University/Fall 2024/COMP 451 Fundamentals of Machine Learning/Project/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1732060458 0
+  "c:/Users/oscar/McGill University/Fall 2024/COMP 451 Fundamentals of Machine Learning/Project/451-Project/Project Litterature/litterature.tex" 1732060456 7571 b970b9e90ebb632bc21d15a3ead91961 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1698433239 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1698430716 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1698430716 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -113,8 +113,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1698436583 4750288 f1f34006308c654e053d5a8459362656 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1698436777 8208524 22298d2832647e05758e1499483573cd ""
   "c:/texlive/2023/texmf.cnf" 1698436561 713 e69b156964470283e0530f5060668171 ""
-  "litterature.aux" 1732060417 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "litterature.tex" 1732060414 6924 edf2c331a8070a42cb74822df3da8a75 ""
+  "litterature.aux" 1732060458 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "litterature.tex" 1732060456 7571 b970b9e90ebb632bc21d15a3ead91961 ""
   (generated)
   "litterature.aux"
   "litterature.log"
