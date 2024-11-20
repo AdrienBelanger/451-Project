@@ -19,39 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{Okpeke}{article}{}
-      \name{author}{3}{}{%
-        {{hash=81be828fc39f1a16375a3cfb2037dfba}{%
-           family={Okpeke},
-           familyi={O\bibinitperiod},
-           given={Patience},
-           giveni={P\bibinitperiod}}}%
-        {{hash=38f1bd97df29410651eb9514ca57e0b1}{%
-           family={Paul},
-           familyi={P\bibinitperiod},
-           given={Patience\bibnamedelima Okpeke},
-           giveni={P\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
-        {{hash=6fb8c9d61b88d4267bdd83692de95432}{%
-           family={Iyelolu},
-           familyi={I\bibinitperiod},
-           given={Toluwalase\bibnamedelima Vanessa},
-           giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-      }
-      \strng{namehash}{080afa3cf8e4cc0afa34b9415557e88d}
-      \strng{fullhash}{080afa3cf8e4cc0afa34b9415557e88d}
-      \strng{bibnamehash}{080afa3cf8e4cc0afa34b9415557e88d}
-      \strng{authorbibnamehash}{080afa3cf8e4cc0afa34b9415557e88d}
-      \strng{authornamehash}{080afa3cf8e4cc0afa34b9415557e88d}
-      \strng{authorfullhash}{080afa3cf8e4cc0afa34b9415557e88d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Open Access Research Journal of Science and Technology}
-      \field{title}{Predicting stock market crashes with machine learning: A review and methodological proposal}
-      \field{type}{Journal Article}
-      \field{year}{2024}
-    \endentry
     \entry{Ahmed}{article}{}
       \name{author}{6}{}{%
         {{hash=72cd99778fd9ea6b75031c508db56a97}{%
@@ -91,8 +58,8 @@
       \strng{authorbibnamehash}{8239993626b4bf6bcbea5b14f63768c2}
       \strng{authornamehash}{45541e05f899eaea5aeb65d28721e29b}
       \strng{authorfullhash}{8239993626b4bf6bcbea5b14f63768c2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0278-081X}
@@ -149,8 +116,8 @@
       \strng{authorbibnamehash}{2f6694914f7ea3496a59356c7f30289d}
       \strng{authornamehash}{f3a480b94df6c743142abcc27a5764c3}
       \strng{authorfullhash}{2f6694914f7ea3496a59356c7f30289d}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Several machine learning and deep learning models were reported in the literature to forecast COVID-19 but there is no comprehensive report on the comparison between statistical models and deep learning models. The present work reports a comparative time-series analysis of deep learning techniques (Recurrent Neural Networks with GRU and LSTM cells) and statistical techniques (ARIMA and SARIMA) to forecast the country-wise cumulative confirmed, recovered, and deaths. The Gated Recurrent Units (GRU), Long Short-Term Memory (LSTM) cells based on Recurrent Neural Networks (RNN), ARIMA and SARIMA models were trained, tested, and optimized to forecast the trends of the COVID-19. We deployed python to optimize the parameters of ARIMA which include (p, d, q) representing autoregressive and moving average terms and parameters of SARIMA model include additional seasonal terms which are denoted by (P, D, Q). Similarly, for LSTM and GRU based RNN models’ parameters (number of layers, hidden size, learning rate and number of epochs) are optimized by deploying PyTorch machine learning framework. The best model was chosen based on the lowest Mean Square Error (MSE) and Root Mean Squared Error (RMSE) values. For most of the time-series data of the countries, deep learning-based models LSTM and GRU outperformed statistical ARIMA and SARIMA models, with an RMSE values that are 40 folds less than that of the ARIMA models. But for some countries statistical (ARIMA, SARIMA) models outperformed deep learning models. Further, we emphasize the importance of various factors such as age, preventive measures and healthcare facilities etc. that play vital role on the rapid spread of COVID-19 pandemic.}
@@ -173,6 +140,149 @@
       \verb https://www.sciencedirect.com/science/article/pii/S1110016822000138
       \endverb
       \keyw{COVID-19 pandemic Gated Recurrent Units (GRUs) Long Short-Term Memory (LSTM) cells Recurrent Neural Networks (RNNs) Auto Regressive Integrated Moving Average (ARIMA) Seasonal Auto Regressive Integrated Moving Average (SARIMA)}
+    \endentry
+    \entry{Okpeke}{article}{}
+      \name{author}{3}{}{%
+        {{hash=81be828fc39f1a16375a3cfb2037dfba}{%
+           family={Okpeke},
+           familyi={O\bibinitperiod},
+           given={Patience},
+           giveni={P\bibinitperiod}}}%
+        {{hash=38f1bd97df29410651eb9514ca57e0b1}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Patience\bibnamedelima Okpeke},
+           giveni={P\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=6fb8c9d61b88d4267bdd83692de95432}{%
+           family={Iyelolu},
+           familyi={I\bibinitperiod},
+           given={Toluwalase\bibnamedelima Vanessa},
+           giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{fullhash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{bibnamehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{authorbibnamehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{authornamehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{authorfullhash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Open Access Research Journal of Science and Technology}
+      \field{title}{Predicting stock market crashes with machine learning: A review and methodological proposal}
+      \field{type}{Journal Article}
+      \field{year}{2024}
+    \endentry
+    \entry{Mishkin}{report}{}
+      \name{author}{2}{}{%
+        {{hash=d53846c752552993eb4d540ed83a6a2f}{%
+           family={Mishkin},
+           familyi={M\bibinitperiod},
+           given={Frederic\bibnamedelima S},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=4761f9e494164cda94e217532d4dbd4a}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Eugene\bibnamedelima N},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{2dc84686cb8cd09b33ce13541b9625bf}
+      \strng{fullhash}{2dc84686cb8cd09b33ce13541b9625bf}
+      \strng{bibnamehash}{2dc84686cb8cd09b33ce13541b9625bf}
+      \strng{authorbibnamehash}{2dc84686cb8cd09b33ce13541b9625bf}
+      \strng{authornamehash}{2dc84686cb8cd09b33ce13541b9625bf}
+      \strng{authorfullhash}{2dc84686cb8cd09b33ce13541b9625bf}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper examines fifteen historical episodes of stock market crashes and their aftermath in the United States over the last one hundred years. Our basic conclusion from studying these episodes is that financial instability is the key problem facing monetary policy makers and not stock market crashes, even if they reflect the possible bursting of a bubble. With a focus on financial stability rather than the stock market, the response of central banks to stock market fluctuations is more likely to be optimal and maintain support for the independence of the central bank.}
+      \field{month}{6}
+      \field{number}{8992}
+      \field{series}{Working Paper Series}
+      \field{title}{U.S. Stock Market Crashes and Their Aftermath: Implications for Monetary Policy}
+      \field{type}{Working Paper}
+      \field{year}{2002}
+      \verb{doi}
+      \verb 10.3386/w8992
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nber.org/papers/w8992
+      \endverb
+      \verb{url}
+      \verb http://www.nber.org/papers/w8992
+      \endverb
+    \endentry
+    \entry{Schmidt}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3c434db5f6f20ddfc1806a8d873a4748}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Robin\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c434db5f6f20ddfc1806a8d873a4748}
+      \strng{fullhash}{3c434db5f6f20ddfc1806a8d873a4748}
+      \strng{bibnamehash}{3c434db5f6f20ddfc1806a8d873a4748}
+      \strng{authorbibnamehash}{3c434db5f6f20ddfc1806a8d873a4748}
+      \strng{authornamehash}{3c434db5f6f20ddfc1806a8d873a4748}
+      \strng{authorfullhash}{3c434db5f6f20ddfc1806a8d873a4748}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{title}{Recurrent Neural Networks (RNNs): A gentle Introduction and Overview}
+      \field{type}{Journal Article}
+      \field{volume}{abs/1912.05911}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1912.05911
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1912.05911
+      \endverb
+    \endentry
+    \entry{Tolo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ebddf205912a2db30472697f7885a640}{%
+           family={Tölö},
+           familyi={T\bibinitperiod},
+           given={Eero},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebddf205912a2db30472697f7885a640}
+      \strng{fullhash}{ebddf205912a2db30472697f7885a640}
+      \strng{bibnamehash}{ebddf205912a2db30472697f7885a640}
+      \strng{authorbibnamehash}{ebddf205912a2db30472697f7885a640}
+      \strng{authornamehash}{ebddf205912a2db30472697f7885a640}
+      \strng{authorfullhash}{ebddf205912a2db30472697f7885a640}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider predicting systemic financial crises one to five years ahead using recurrent neural networks. We evaluate the prediction performance with the Jórda-Schularick-Taylor dataset, which includes the crisis dates and annual macroeconomic series of 17 countries over the period 1870−2016. Previous literature has found that simple neural net architectures are useful and outperform the traditional logistic regression model in predicting systemic financial crises. We show that such predictions can be significantly improved by making use of the Long-Short Term Memory (RNN-LSTM) and the Gated Recurrent Unit (RNN-GRU) neural nets. Behind the success is the recurrent networks’ ability to make more robust predictions from the time series data. The results remain robust after extensive sensitivity analysis.}
+      \field{issn}{1572-3089}
+      \field{journaltitle}{Journal of Financial Stability}
+      \field{title}{Predicting systemic financial crises with recurrent neural networks}
+      \field{volume}{49}
+      \field{year}{2020}
+      \field{pages}{100746}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jfs.2020.100746
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1572308920300243
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1572308920300243
+      \endverb
+      \keyw{Early warning system,Systemic Banking crises,Neural networks,Validation}
     \endentry
   \enddatalist
 \endrefsection
