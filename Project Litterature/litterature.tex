@@ -64,12 +64,13 @@ We shall use data freely available on the Yahoo finance database, and tag histor
 
 % - Identify gaps in literature that our project adresses and what is new about it
 
-\subsection*{Methodology}
-When first looking at a time series, we need to know that whether there it is \textbf{stationary} or \textbf{non-stationary}, which means 
+%\subsection*{Methodology}
+\subparagraph*{}
+When first looking at a time series, we need to know that whether there it is \textbf{stationary} or \textbf{non-stationary}, which means.
 
 - Justify why we chose those three models by finding similar work \textcolor{red}{Oscar ?} This might be good: https://oarjst.com/sites/default/files/OARJST-2024-0095.pdf ----- Nevermind, I (Adrien) did it in Background I think.
     \subsubsection*{ARIMA on predicting market crash \textcolor{red}{Oscar}}
-    Time series in stock market are mostly non-stationary. But except for differences in the local level or in trend, all parts of the series behave in a similar way [Box et al. 2015]. Box et al suggested a model called Autoregressive Integrated Moving Average (ARIMA) model which combines autoregression model and moving average model. It is a models that can be used in non-stationary time series to make prediction [M K Ho et al 2021 J. Phys.: Conf. Ser. 1988 012041].
+    Time series in stock market are mostly non-stationary. Except for differences in the local level or in trend, all parts of the series behave in a similar way [Box et al. 2015]. Box et al suggested a model called Autoregressive Integrated Moving Average (ARIMA) model which combines an autoregressive model and a moving average model. It is a model that can be used in non-stationary time series to make predictions [M K Ho et al 2021 J. Phys.: Conf. Ser. 1988 012041].
     %https://iopscience.iop.org/article/10.1088/1742-6596/1988/1/012041/pdf
     The ARIMA model ARIMA($p,d,q$) has general form [Box et al. 2015]:
     % http://repo.darmajaya.ac.id/4781/1/Time%20Series%20Analysis_%20Forecasting%20and%20Control%20%28%20PDFDrive%20%29.pdf
@@ -91,11 +92,11 @@ When first looking at a time series, we need to know that whether there it is \t
 
     %- Review its application in time series analysis in our context
     \subsubsection*{Transformers \textcolor{red}{Inigo}}
-Transformers are neural network architectures that are based on "self-attention mechanisms" (allowing the model to weigh the importance of different elements in the input by computing attention scores between all positions) to model dependencies in sequential data. while Transofrmers were originally developped for natural language processing tasks like machine translation [Vaswani et al., "Attention is All You Need"], they have become popular for time series forecasting due to their ability to handle long-range dependencies.
+Transformers are neural network architectures that are based on "self-attention mechanisms" (allowing the model to weigh the importance of different elements in the input by computing attention scores between all positions) to model dependencies in sequential data. while Transformers were originally developped for natural language processing tasks like machine translation [Vaswani et al., "Attention is All You Need"], they have become popular for time series forecasting due to their ability to handle long-range dependencies.
 
 Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in fluctuative/volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention [Zhou et al., "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"]. Moreover, Lim et al. were even able to outperform traditional methods by combining Transformer architecture with recurrent layers [Lim et al., "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting"].
 
-Hence, the literature suggest that Tranformers are a pertinent choice for identifying complex patterns in finatial time series, as they can model dependencies accros mutiple time sclaes, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
+Hence, the literature suggest that Tranformers are a pertinent choice for identifying complex patterns in financial time series, as they can model dependencies accros mutiple time scales, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
 
 
 
