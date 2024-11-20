@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber litterature"] 1732123276.83009 "litterature.bcf" "litterature.bbl" "litterature" 1732124178.99978 0
+["biber litterature"] 1732123276.83009 "litterature.bcf" "litterature.bbl" "litterature" 1732124578.15027 0
   "bibliography.bib" 1732122612.31516 9320 0306bd606032224264699b13f9729e66 ""
-  "litterature.bcf" 1732124178.92892 107894 1e537506fd861e7ce42cc80f17d46ca3 "pdflatex"
+  "litterature.bcf" 1732124578.07122 107894 1e537506fd861e7ce42cc80f17d46ca3 "pdflatex"
   (generated)
   "litterature.bbl"
   "litterature.blg"
   (rewritten before read)
-["pdflatex"] 1732124178.01544 "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1732124179.00005 0
-  "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" 1732124177.74574 8339 37201cf6e60ace694560be41e9da3b45 ""
+["pdflatex"] 1732124577.11677 "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" "litterature.pdf" "litterature" 1732124578.15055 0
+  "/Users/adrienbelanger/Documents/GitHub/451-Project/Project Litterature/litterature.tex" 1732124576.89772 8331 f3d37e4dada2d1fbebf599f4f63962fa ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -154,10 +154,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730164663.25961 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730164550 8221428 c019502a42a6718531fa8089a6a429eb ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "litterature.aux" 1732124178.92721 1257 cb3146603fd8a5c749c32fa94ac56320 "pdflatex"
+  "litterature.aux" 1732124578.06986 1257 cb3146603fd8a5c749c32fa94ac56320 "pdflatex"
   "litterature.bbl" 1732123279.3033 17820 77b52f958d9b56fa3b50fa88b5c28c27 "biber litterature"
-  "litterature.run.xml" 1732124178.93123 2453 02cfe79989ba38ad832420693ecf51c1 "pdflatex"
-  "litterature.tex" 1732124177.74574 8339 37201cf6e60ace694560be41e9da3b45 ""
+  "litterature.run.xml" 1732124578.07197 2453 02cfe79989ba38ad832420693ecf51c1 "pdflatex"
+  "litterature.tex" 1732124576.89772 8331 f3d37e4dada2d1fbebf599f4f63962fa ""
   (generated)
   "litterature.aux"
   "litterature.bcf"
