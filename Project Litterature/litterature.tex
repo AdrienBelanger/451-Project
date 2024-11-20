@@ -88,7 +88,7 @@ When first looking at a time series, we need to know that whether there it is \t
     % https://otexts.com/fpp2/
     \subsubsection*{Reccurent Neural Networks \textcolor{red}{Adrien}}
     %- Overview of Recurrent Neural Networks (RNNs)
-    Recurrent Neural Networks are a class of neural network architectures designed to detect patterns in sequential data, such as handwriting, genomes, text, or numerical time series. \cite{Schmidt} They have been used in multiple projects accounting to market Crashes, such as this project led by Tolo et al. \cite{Tolo}
+    Recurrent Neural Networks are a class of neural network architectures designed to detect patterns in sequential data, such as handwriting, genomes, text, or numerical time series. In time-series, they are used to make sequential predictions based on sequential inputs. \cite{Schmidt} In our context, they usually take the form of Long Term Short Memory (LSTM) cells \cite{Hansika}, which we will use in our project, to mitigate the vanishing gradient problem. They do so by having cells with three gates: An input, output and a forget gate combined with a feedback loop to enhance long-term accuracy. These gates help control how the information flows through the network. \cite{Hansika} They have been used in multiple projects accounting to market Crashes, such as this project led by Tolo et al. \cite{Tolo} It is not well established when RNNs and Arimas outperform one another \cite{Hansika}, this project will take a step into clearing up the most appropriate in the context of Market Crashes prediction.
 
     %- Review its application in time series analysis in our context
     \subsubsection*{Transformers \textcolor{red}{Inigo}}
