@@ -1,0 +1,180 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Okpeke}{article}{}
+      \name{author}{3}{}{%
+        {{hash=81be828fc39f1a16375a3cfb2037dfba}{%
+           family={Okpeke},
+           familyi={O\bibinitperiod},
+           given={Patience},
+           giveni={P\bibinitperiod}}}%
+        {{hash=38f1bd97df29410651eb9514ca57e0b1}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Patience\bibnamedelima Okpeke},
+           giveni={P\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=6fb8c9d61b88d4267bdd83692de95432}{%
+           family={Iyelolu},
+           familyi={I\bibinitperiod},
+           given={Toluwalase\bibnamedelima Vanessa},
+           giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{fullhash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{bibnamehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{authorbibnamehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{authornamehash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \strng{authorfullhash}{080afa3cf8e4cc0afa34b9415557e88d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Open Access Research Journal of Science and Technology}
+      \field{title}{Predicting stock market crashes with machine learning: A review and methodological proposal}
+      \field{type}{Journal Article}
+      \field{year}{2024}
+    \endentry
+    \entry{Ahmed}{article}{}
+      \name{author}{6}{}{%
+        {{hash=72cd99778fd9ea6b75031c508db56a97}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Sabeen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=add92d282025e7794f8ac4571db94631}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Ian\bibnamedelima E.},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=b04748051f6b40c351a774ded3ff99fe}{%
+           family={Tripathi},
+           familyi={T\bibinitperiod},
+           given={Aakash},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e4e18cdcfef94cb5440d518e388538ea}{%
+           family={Siddiqui},
+           familyi={S\bibinitperiod},
+           given={Shamoon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6cebb0df8942ed27dd73f27cba8d7b22}{%
+           family={Ramachandran},
+           familyi={R\bibinitperiod},
+           given={Ravi\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=95306ef8f0489755283f772b4bb3c4d1}{%
+           family={Rasool},
+           familyi={R\bibinitperiod},
+           given={Ghulam},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{45541e05f899eaea5aeb65d28721e29b}
+      \strng{fullhash}{8239993626b4bf6bcbea5b14f63768c2}
+      \strng{bibnamehash}{8239993626b4bf6bcbea5b14f63768c2}
+      \strng{authorbibnamehash}{8239993626b4bf6bcbea5b14f63768c2}
+      \strng{authornamehash}{45541e05f899eaea5aeb65d28721e29b}
+      \strng{authorfullhash}{8239993626b4bf6bcbea5b14f63768c2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0278-081X}
+      \field{journaltitle}{Circuits Syst. Signal Process.}
+      \field{number}{12}
+      \field{title}{Transformers in Time-Series Analysis: A Tutorial}
+      \field{type}{Journal Article}
+      \field{volume}{42}
+      \field{year}{2023}
+      \field{pages}{7433\bibrangedash 7466}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1007/s00034-023-02454-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00034-023-02454-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00034-023-02454-8
+      \endverb
+      \keyw{Positional encoding,Self-attention,Time-series,Transformer}
+    \endentry
+    \entry{ArunKumar}{article}{}
+      \name{author}{5}{}{%
+        {{hash=8bb57fd29d01a8f5f0bd19f9a6a0ade1}{%
+           family={ArunKumar},
+           familyi={A\bibinitperiod},
+           given={K.\bibnamedelimi E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=4c713d8503601f13bc812bd2f257d295}{%
+           family={Kalaga},
+           familyi={K\bibinitperiod},
+           given={Dinesh\bibnamedelima V.},
+           giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=fd8d400c0f7768f8085d4ec844c9eefc}{%
+           family={Mohan\bibnamedelimb Sai\bibnamedelima Kumar},
+           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Ch},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a8876b5bb10f7650214457d930a6bbfc}{%
+           family={Kawaji},
+           familyi={K\bibinitperiod},
+           given={Masahiro},
+           giveni={M\bibinitperiod}}}%
+        {{hash=92fa705d03e3e8f923a32f2a081cd66e}{%
+           family={Brenza},
+           familyi={B\bibinitperiod},
+           given={Timothy\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f3a480b94df6c743142abcc27a5764c3}
+      \strng{fullhash}{2f6694914f7ea3496a59356c7f30289d}
+      \strng{bibnamehash}{2f6694914f7ea3496a59356c7f30289d}
+      \strng{authorbibnamehash}{2f6694914f7ea3496a59356c7f30289d}
+      \strng{authornamehash}{f3a480b94df6c743142abcc27a5764c3}
+      \strng{authorfullhash}{2f6694914f7ea3496a59356c7f30289d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Several machine learning and deep learning models were reported in the literature to forecast COVID-19 but there is no comprehensive report on the comparison between statistical models and deep learning models. The present work reports a comparative time-series analysis of deep learning techniques (Recurrent Neural Networks with GRU and LSTM cells) and statistical techniques (ARIMA and SARIMA) to forecast the country-wise cumulative confirmed, recovered, and deaths. The Gated Recurrent Units (GRU), Long Short-Term Memory (LSTM) cells based on Recurrent Neural Networks (RNN), ARIMA and SARIMA models were trained, tested, and optimized to forecast the trends of the COVID-19. We deployed python to optimize the parameters of ARIMA which include (p, d, q) representing autoregressive and moving average terms and parameters of SARIMA model include additional seasonal terms which are denoted by (P, D, Q). Similarly, for LSTM and GRU based RNN models’ parameters (number of layers, hidden size, learning rate and number of epochs) are optimized by deploying PyTorch machine learning framework. The best model was chosen based on the lowest Mean Square Error (MSE) and Root Mean Squared Error (RMSE) values. For most of the time-series data of the countries, deep learning-based models LSTM and GRU outperformed statistical ARIMA and SARIMA models, with an RMSE values that are 40 folds less than that of the ARIMA models. But for some countries statistical (ARIMA, SARIMA) models outperformed deep learning models. Further, we emphasize the importance of various factors such as age, preventive measures and healthcare facilities etc. that play vital role on the rapid spread of COVID-19 pandemic.}
+      \field{issn}{1110-0168}
+      \field{journaltitle}{Alexandria Engineering Journal}
+      \field{number}{10}
+      \field{title}{Comparative analysis of Gated Recurrent Units (GRU), long Short-Term memory (LSTM) cells, autoregressive Integrated moving average (ARIMA), seasonal autoregressive Integrated moving average (SARIMA) for forecasting COVID-19 trends}
+      \field{type}{Journal Article}
+      \field{volume}{61}
+      \field{year}{2022}
+      \field{pages}{7585\bibrangedash 7603}
+      \range{pages}{19}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.aej.2022.01.011
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1110016822000138
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1110016822000138
+      \endverb
+      \keyw{COVID-19 pandemic Gated Recurrent Units (GRUs) Long Short-Term Memory (LSTM) cells Recurrent Neural Networks (RNNs) Auto Regressive Integrated Moving Average (ARIMA) Seasonal Auto Regressive Integrated Moving Average (SARIMA)}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

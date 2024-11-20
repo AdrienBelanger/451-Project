@@ -6,6 +6,15 @@
 \usepackage{enumitem}
 \usepackage{ragged2e} % justification
 \usepackage{comment} % for commenting out multiple lines
+\usepackage[
+backend=biber,
+style=ieee,
+sorting=none,
+]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+
 \setlength{\droptitle}{-1.2in}
 \pretitle{\vspace{0em}\begin{center}\Large} 
 \posttitle{\par\end{center}\vspace{-1.25em}}
@@ -38,13 +47,13 @@ Evaluation Criterias:
 \subsection*{Background and Introduction \textcolor{red}{Adrien (Goes with Background)} }
 We are not the first to approach this subject. 
 Multiple papers have approached prediction of stock market crashes using Machine Learning. 
-Some have used Support Vector Machines, random forests, and others Neural Networks [Okpeke, Predicting Stock Market]. 
-In a time series analysis approach, models used have traditionally included RNNs and Arima, and more recently Transformers. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
-These models have been used in Market Crash prediction [Okpeke]. 
+Some have used Support Vector Machines, random forests, and others Neural Networks \cite{Okpeke}. 
+In a time series analysis approach, models used have traditionally included RNNs and Arima, and more recently Transformers \cite{Ahmed} \cite{ArunKumar}. 
+These models have been used in Market Crash prediction \cite{Okpeke}. 
 
 
-Reviews and comparisons of these models, such as this project aims to do, have been made such as [Okpeke, Predicting], but a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in literature. 
-This project aims to address this lack, by providing an empirical comparison of three commonly used models in Time-Series Analysis (Arima models, RNNs and Transformers) to predict Market Crashes. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
+Reviews and comparisons of these models, such as this project aims to do, have been made such as \cite{Okpeke}, but a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in literature. 
+This project aims to address this lack, by providing an empirical comparison of three commonly used models in Time-Series Analysis (Arima models, RNNs and Transformers) to predict Market Crashes. \cite{Ahmed} \cite{ArunKumar}
 We shall use data freely available on the Yahoo finance database, and tag historically factual Market Crashes by hand, as there are only few. We shall use the crashes as listed in []. This methodology (or closely related) is common procedure, and has been used for this in the past [][].
 
 %\subsection*{Background on Time Series and Financial Market Crashes \textcolor{red}{Adrien}}
@@ -97,6 +106,8 @@ Hence, the literature suggest that Tranformers are a pertinent choice for identi
 
 - Justify the selection of those comparison methods based on sources
 
+\pagebreak
+\printbibliography
 
 % Modify proposal in proposal.tex
 %\subsection*{Adapt proposal: \textcolor{red}{Inigo}}
