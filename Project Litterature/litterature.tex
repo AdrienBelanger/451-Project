@@ -39,11 +39,7 @@ Evaluation Criterias:
 We are not the first to approach this subject. 
 Multiple papers have approached prediction of stock market crashes using Machine Learning. 
 Some have used Support Vector Machines, random forests, and others Neural Networks [Okpeke, Predicting Stock Market]. 
-<<<<<<< HEAD
-In a time series analysis approach, models used have traditionnally included RNNs and ARIMA, and more recently Transformers. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
-=======
 In a time series analysis approach, models used have traditionally included RNNs and Arima, and more recently Transformers. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
->>>>>>> 8f41467258f6969ceaec796220b205ac809d087a
 These models have been used in Market Crash prediction [Okpeke]. 
 Others have tried using diverse databases and models such as Social Media interactions [Chhajer, The Applications.. ] using Natural Language Processing. As this is a very economically valuable foresight, a lot of research has been done on the subject.
 
@@ -66,10 +62,23 @@ We shall use data freely available on the Yahoo finance database, and tag histor
 When first looking at a time series, we need to know that whether there it is \textbf{stationary} or \textbf{non-stationary}, which means 
 
 - Justify why we chose those three models by finding similar work \textcolor{red}{Oscar ?} This might be good: https://oarjst.com/sites/default/files/OARJST-2024-0095.pdf
-    \subsubsection*{ARIMA \textcolor{red}{Oscar}}
-    Autoregressive Integrated Moving Average model combines autoregression model and moving average model. It is a models that used in time series to make prediction
-
-    - Review its application in time series analysis in our context
+    \subsubsection*{ARIMA on predicting market crash \textcolor{red}{Oscar}}
+    Time series in stock market are mostly non-stationary. But except for differences in the local level or in trend, all parts of the series behave in a similar way [Box et al. 2015]. Box et al suggested a model called Autoregressive Integrated Moving Average (ARIMA) model which combines autoregression model and moving average model. It is a models that can be used in non-stationary time series to make prediction [M K Ho et al 2021 J. Phys.: Conf. Ser. 1988 012041].
+    %https://iopscience.iop.org/article/10.1088/1742-6596/1988/1/012041/pdf
+    The ARIMA model ARIMA($p,d,q$) has general form [Box et al. 2015]:
+    % http://repo.darmajaya.ac.id/4781/1/Time%20Series%20Analysis_%20Forecasting%20and%20Control%20%28%20PDFDrive%20%29.pdf
+    \begin{align*}
+        \varphi (B) z_t = \phi (B)\nabla^d z_t = \theta_0 + \theta (B)a_t
+    \end{align*}
+    where
+    \begin{enumerate}[label=\arabic*.]
+        \item $\phi(B)$ is the autoregressive part with $p$ degrees,
+        \item $\theta (B)$ is the moving average part with $q$ degrees,
+        \item $\nabla$ is the integrated (degree of differencing) part with $d$ degrees,
+        \item and $\theta_0$ is the constant term.
+    \end{enumerate}
+    Using ACF (autocorrelation function) and PACF (partial ACF) can help us decide the hyperparameters $p, d, q$ for building our model [Hyndman et al. 2018].
+    % https://otexts.com/fpp2/
     \subsubsection*{Reccurent Neural Networks \textcolor{red}{Adrien}}
     %- Overview of Recurrent Neural Networks (RNNs)
     Recurrent Neural Networks are a class of neural network architectures designed to detect patterns in sequential data, such as handwriting, genomes, text, or numerical time series. [Schmidt, Recurrent Neural Networks...]. They have been used in multiple projects accounting to market Crashes, such as [] and [].
@@ -80,11 +89,7 @@ Transformers are neural network architectures that are based on "self-attention 
 
 Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in fluctuative/volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention [Zhou et al., "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"]. Moreover, Lim et al. were even able to outperform traditional methods by combining Transformer architecture with recurrent layers [Lim et al., "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting"].
 
-<<<<<<< HEAD
 Hence, the literature suggest that Tranformers are a pertinent choice for identifying complex patterns in finatial time series, as they can model dependencies accros mutiple time sclaes, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
-=======
-Hence, the litteratrue suggest that Transformers are a pertinent choice for identifying complex patterns in finatial time series, as they can model dependencies accros mutiple time sclaes, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
->>>>>>> 8f41467258f6969ceaec796220b205ac809d087a
 
 
 
@@ -94,6 +99,6 @@ Hence, the litteratrue suggest that Transformers are a pertinent choice for iden
 - Justify the selection of those comparison methods based on sources
 
 
-
-\subsection*{Adapt proposal: \textcolor{red}{Inigo}}
+% Modify proposal in proposal.tex
+%\subsection*{Adapt proposal: \textcolor{red}{Inigo}}
 \end{document}
