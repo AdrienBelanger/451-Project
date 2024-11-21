@@ -67,8 +67,9 @@ We shall use data freely available on the Yahoo finance database and tag histori
 \subparagraph*{}
  %https://oarjst.com/sites/default/files/OARJST-2024-0095.pdf
     \subsubsection*{ARIMA on predicting market crash \textcolor{red}{Oscar}}
-    Time series in stock market are mostly non-stationary. Except for differences in the local level or in trend, all parts of the series behave in a similar way [Box et al. 2015]. Box et al suggested a model called Autoregressive Integrated Moving Average (ARIMA) model which combines an autoregressive model and a moving average model. This model can be used in non-stationary time series to make predictions [M K Ho et al 2021 J. Phys.: Conf. Ser. 1988 012041].
-    %https://iopscience.iop.org/article/10.1088/1742-6596/1988/1/012041/pdf
+Time series in the stock market are mostly non-stationary, meaning that their statistical properties, such as mean and variance, change over time. While non-stationary series can exhibit local differences in level or trend, their overall behaviour can often be modelled using similar statistical frameworks \cite{ho2021}. 
+That's why Box et al. proposed a model called the Autoregressive Integrated Moving Average (ARIMA) model, which combines an autoregressive component (modelling the relationship between an observation and its past values) with a moving average component (modelling the relationship between an observation and past errors) \cite{box2015}. 
+This mechanism makes ARIMA suitable for predicting non-stationary time series, as M. K. Ho et al. demonstrated in their physics conference paper \cite{ho2021}.
     The ARIMA model ARIMA($p,d,q$) has general form [Box et al. 2015]:
     % http://repo.darmajaya.ac.id/4781/1/Time%20Series%20Analysis_%20Forecasting%20and%20Control%20%28%20PDFDrive%20%29.pdf
     \begin{align*}
