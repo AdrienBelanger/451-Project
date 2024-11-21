@@ -504,6 +504,36 @@
       \verb https://doi.org/10.1016/j.ijforecast.2021.03.012
       \endverb
     \endentry
+    \entry{zeng2023financial}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b166c2dc8c6706d7e73a18155ca2d83c}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{a98ea77eb7b264e182185776c46dc93f}
+      \strng{fullhash}{a98ea77eb7b264e182185776c46dc93f}
+      \strng{bibnamehash}{a98ea77eb7b264e182185776c46dc93f}
+      \strng{authorbibnamehash}{a98ea77eb7b264e182185776c46dc93f}
+      \strng{authornamehash}{a98ea77eb7b264e182185776c46dc93f}
+      \strng{authorfullhash}{a98ea77eb7b264e182185776c46dc93f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2304.04912}
+      \field{title}{Financial Time Series Forecasting using CNN and Transformer}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2304.04912
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2304.04912
+      \endverb
+    \endentry
     \entry{Fonville}{article}{}
       \name{author}{1}{}{%
         {{hash=f6cb9e816cf362309b18d3e534b027d7}{%
