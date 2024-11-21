@@ -91,12 +91,11 @@ When first looking at a time series, we need to know that whether there it is \t
 
     %- Review its application in time series analysis in our context
     \subsubsection*{Transformers \textcolor{red}{Inigo}}
-Transformers are neural network architectures based on self-attention mechanisms, which allow the model to weigh the importance of different elements in the input by computing attention scores between all positions. While Transformers were originally developed for natural language processing tasks such as machine translation \cite{vaswani2017attention}, they have become popular for time-series forecasting due to their ability to handle long-range dependencies.
+Transformers are neural network architectures based on self-attention mechanisms, which allows them to weigh the importance of input elements by computing attention scores between all positions. While transformers were originally developed for natural language processing tasks like machine translation \cite{vaswani2017attention}, they have become popular for time-series forecasting due to their ability to handle long-range dependencies.
 
-Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in volatile financial markets. Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention \cite{zhou2021informer}. Similarly, Lim et al. outperformed traditional methods by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}.
+Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention \cite{zhou2021informer}. Moreover, Lim et al. were able to outperform traditional methods by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}.
 
-Hence, the literature suggests that Transformers are a pertinent choice for identifying complex patterns in financial time series, as they can model dependencies across multiple time scales, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs.
-
+Hence, the literature suggests that Transformers are a pertinent choice for identifying complex patterns in financial time series, as they can model dependencies across multiple time scales and potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs.
 
 
 \subsection*{Criterias and Analysis \textcolor{red}{Oscar?}}
