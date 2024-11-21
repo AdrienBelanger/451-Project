@@ -6,17 +6,26 @@
 \usepackage{enumitem}
 \usepackage{ragged2e} % justification
 \usepackage{comment} % for commenting out multiple lines
+\usepackage[
+backend=biber,
+style=ieee,
+sorting=none,
+]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+
 \setlength{\droptitle}{-1.2in}
 \pretitle{\vspace{0em}\begin{center}\Large} 
-\posttitle{\par\end{center}\vspace{-1.25em}}
+\posttitle{\par\end{center}\vspace{-0.7em}}
 \preauthor{\vspace{0em}\begin{center}} 
-\postauthor{\par\end{center}\vspace{-1.5em}} 
+\postauthor{\par\end{center}\vspace{-0.7em}} 
 \predate{\vspace{0em}\begin{center}} 
 \postdate{\par\end{center}\vspace{-0.5em}} 
 
 
 \title{Empirical Review of Models used for Predicting Financial Market Crashes Using Market Data}
-\author{\large Project: Literature Review \vspace{0.75em} \\ \normalsize By Ping-Chieh Tu, Adrien Bélanger, and Inigo Torres}
+\author{\large Project: Literature Review \vspace{0.65em} \\ \normalsize By Ping-Chieh Tu, Adrien Bélanger, and Inigo Torres}
 \date{November 22$^{\text{nd}}$ 2024}
 
 \begin{document}
@@ -35,17 +44,15 @@ Evaluation Criterias:
 
 - Coverage (are you adequately covering most relevant works)
 \end{comment}
-\subsection*{Background and Introduction \textcolor{red}{Adrien (Goes with Background)} }
+\subsection*{Background and Introduction}
 We are not the first to approach this subject. 
 Multiple papers have approached prediction of stock market crashes using Machine Learning. 
-Some have used Support Vector Machines, random forests, and others Neural Networks [Okpeke, Predicting Stock Market]. 
-In a time series analysis approach, models used have traditionally included RNNs and Arima, and more recently Transformers. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
-These models have been used in Market Crash prediction [Okpeke]. 
+In a time series analysis approach, models used have traditionally included RNNs and Arima, and more recently Transformers \cite{Ahmed} \cite{ArunKumar}. 
+These models have been retroactively used with success in Market Crash prediction \cite{Okpeke}. 
 
-
-Reviews and comparisons of these models, such as this project aims to do, have been made such as [Okpeke, Predicting], but a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in literature. 
-This project aims to address this lack, by providing an empirical comparison of three commonly used models in Time-Series Analysis (Arima models, RNNs and Transformers) to predict Market Crashes. [Sabeen Ahmed, Transformers ... ] [Arunkumar, Comparative Analysis]. 
-We shall use data freely available on the Yahoo finance database, and tag historically factual Market Crashes by hand, as there are only few. We shall use the crashes as listed in []. This methodology (or closely related) is common procedure, and has been used for this in the past [][].
+Reviews and comparisons of these models, such as this project aims to do, have been made such as \cite{Okpeke}, but a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in literature. 
+This project aims to address this lack, by providing an empirical comparison of the three aforementionned commonly used models in Time-Series Analysis to predict Market Crashes. \cite{Ahmed} \cite{ArunKumar}
+We shall use data freely available on the Yahoo finance database, and tag historically factual Market Crashes by hand, as there are only few. We shall use the crashes as listed in this National Bureau of Economic Research's report. \cite{Mishkin}
 
 %\subsection*{Background on Time Series and Financial Market Crashes \textcolor{red}{Adrien}}
 
@@ -57,12 +64,13 @@ We shall use data freely available on the Yahoo finance database, and tag histor
 
 % - Identify gaps in literature that our project adresses and what is new about it
 
-\subsection*{Methodology}
-When first looking at a time series, we need to know that whether there it is \textbf{stationary} or \textbf{non-stationary}, which means 
+%\subsection*{Methodology}
+\subparagraph*{}
+When first looking at a time series, we need to know that whether there it is \textbf{stationary} or \textbf{non-stationary}, which means.
 
-- Justify why we chose those three models by finding similar work \textcolor{red}{Oscar ?} This might be good: https://oarjst.com/sites/default/files/OARJST-2024-0095.pdf
+- Justify why we chose those three models by finding similar work \textcolor{red}{Oscar ?} This might be good: https://oarjst.com/sites/default/files/OARJST-2024-0095.pdf ----- Nevermind, I (Adrien) did it in Background I think.
     \subsubsection*{ARIMA on predicting market crash \textcolor{red}{Oscar}}
-    Time series in stock market are mostly non-stationary. But except for differences in the local level or in trend, all parts of the series behave in a similar way [Box et al. 2015]. Box et al suggested a model called Autoregressive Integrated Moving Average (ARIMA) model which combines autoregression model and moving average model. It is a models that can be used in non-stationary time series to make prediction [M K Ho et al 2021 J. Phys.: Conf. Ser. 1988 012041].
+    Time series in stock market are mostly non-stationary. Except for differences in the local level or in trend, all parts of the series behave in a similar way [Box et al. 2015]. Box et al suggested a model called Autoregressive Integrated Moving Average (ARIMA) model which combines an autoregressive model and a moving average model. This model can be used in non-stationary time series to make predictions [M K Ho et al 2021 J. Phys.: Conf. Ser. 1988 012041].
     %https://iopscience.iop.org/article/10.1088/1742-6596/1988/1/012041/pdf
     The ARIMA model ARIMA($p,d,q$) has general form [Box et al. 2015]:
     % http://repo.darmajaya.ac.id/4781/1/Time%20Series%20Analysis_%20Forecasting%20and%20Control%20%28%20PDFDrive%20%29.pdf
@@ -80,15 +88,15 @@ When first looking at a time series, we need to know that whether there it is \t
     % https://otexts.com/fpp2/
     \subsubsection*{Reccurent Neural Networks \textcolor{red}{Adrien}}
     %- Overview of Recurrent Neural Networks (RNNs)
-    Recurrent Neural Networks are a class of neural network architectures designed to detect patterns in sequential data, such as handwriting, genomes, text, or numerical time series. [Schmidt, Recurrent Neural Networks...]. They have been used in multiple projects accounting to market Crashes, such as [] and [].
+    Recurrent Neural Networks are a class of neural network architectures designed to detect patterns in sequential data, such as handwriting, genomes, text, or numerical time series. In time-series, they are used to make sequential predictions based on sequential inputs. \cite{Schmidt} In our context, they usually take the form of Long Term Short Memory (LSTM) cells \cite{Hansika}, which we will use in our project, to mitigate the vanishing gradient problem. They do so by having cells with three gates: An input, output and a forget gate combined with a feedback loop to enhance long-term accuracy. These gates help control how the information flows through the network. \cite{Hansika} They have been used in multiple projects accounting to market Crashes, such as this project led by Tolo et al. \cite{Tolo} It is not well established when RNNs and Arimas outperform one another \cite{Hansika}, this project will take a step into clearing up the most appropriate in the context of Market Crashes prediction.
 
     %- Review its application in time series analysis in our context
     \subsubsection*{Transformers \textcolor{red}{Inigo}}
-Transformers are neural network architectures that are based on "self-attention mechanisms" (allowing the model to weigh the importance of different elements in the input by computing attention scores between all positions) to model dependencies in sequential data. while Transofrmers were originally developped for natural language processing tasks like machine translation [Vaswani et al., "Attention is All You Need"], they have become popular for time series forecasting due to their ability to handle long-range dependencies.
+Transformers are neural network architectures that are based on "self-attention mechanisms" (allowing the model to weigh the importance of different elements in the input by computing attention scores between all positions) to model dependencies in sequential data. while Transformers were originally developped for natural language processing tasks like machine translation [Vaswani et al., "Attention is All You Need"], they have become popular for time series forecasting due to their ability to handle long-range dependencies.
 
 Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in fluctuative/volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention [Zhou et al., "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"]. Moreover, Lim et al. were even able to outperform traditional methods by combining Transformer architecture with recurrent layers [Lim et al., "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting"].
 
-Hence, the literature suggest that Tranformers are a pertinent choice for identifying complex patterns in finatial time series, as they can model dependencies accros mutiple time sclaes, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
+Hence, the literature suggest that Tranformers are a pertinent choice for identifying complex patterns in financial time series, as they can model dependencies accros mutiple time scales, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
 
 
 
@@ -97,6 +105,8 @@ Hence, the literature suggest that Tranformers are a pertinent choice for identi
 
 - Justify the selection of those comparison methods based on sources
 
+\pagebreak
+\printbibliography
 
 % Modify proposal in proposal.tex
 %\subsection*{Adapt proposal: \textcolor{red}{Inigo}}
