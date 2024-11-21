@@ -45,10 +45,9 @@ Evaluation Criterias:
 - Coverage (are you adequately covering most relevant works)
 \end{comment}
 \subsection*{Background and Introduction}
-We are not the first to approach this subject. 
-Multiple papers have approached prediction of stock market crashes using Machine Learning. 
-In a time series analysis approach, models used have traditionally included RNNs and Arima, and more recently Transformers \cite{Ahmed} \cite{ArunKumar}. 
-These models have been retroactively used with success in Market Crash prediction \cite{Okpeke}. 
+The idea of predicting stock market crashes using machine learning is not new.
+Multiple papers have approached stock market crash prediction using Machine Learning techniques. 
+Traditionally, time series analysis has relied on models like Recurrent Neural Networks (RNNs) and ARIMA. More recently, the introduction of Transformer-based architectures has expanded the range of tools available for this approach \cite{Ahmed, ArunKumar}.These models have been retroactively used with success in Market Crash prediction \cite{Okpeke}. 
 
 Reviews and comparisons of these models, such as this project aims to do, have been made such as \cite{Okpeke}, but a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in literature. 
 This project aims to address this lack, by providing an empirical comparison of the three aforementionned commonly used models in Time-Series Analysis to predict Market Crashes. \cite{Ahmed} \cite{ArunKumar}
@@ -90,12 +89,11 @@ We shall use data freely available on the Yahoo finance database, and tag histor
 
     %- Review its application in time series analysis in our context
     \subsubsection*{Transformers \textcolor{red}{Inigo}}
-Transformers are neural network architectures that are based on "self-attention mechanisms" (allowing the model to weigh the importance of different elements in the input by computing attention scores between all positions) to model dependencies in sequential data. while Transformers were originally developped for natural language processing tasks like machine translation [Vaswani et al., "Attention is All You Need"], they have become popular for time series forecasting due to their ability to handle long-range dependencies.
+Transformers are neural network architectures based on self-attention mechanisms. In other words, they are able to weigh the importance of input elements by computing attention scores between all positions. While transformers were originally developed for natural language processing tasks like machine translation \cite{vaswani2017attention}, they have become popular for time-series forecasting due to their ability to handle long-range dependencies.
 
-Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in fluctuative/volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention [Zhou et al., "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting"]. Moreover, Lim et al. were even able to outperform traditional methods by combining Transformer architecture with recurrent layers [Lim et al., "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting"].
+Transformers can capture complex temporal patterns by assigning varying importance to different time steps, which is particularly useful in volatile financial markets. In fact, Zhou et al. demonstrated this with the Informer model, which efficiently handles long sequences and improves forecasting accuracy using self-attention \cite{zhou2021informer}. Moreover, Lim et al. were able to outperform traditional methods by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}.
 
-Hence, the literature suggest that Tranformers are a pertinent choice for identifying complex patterns in financial time series, as they can model dependencies accros mutiple time scales, potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs
-
+Hence, the literature suggests that Transformers are a pertinent choice for identifying complex patterns in financial time series, as they can model dependencies across multiple time scales and potentially improving the precision of crash predictions compared to traditional methods like ARIMA and standard RNNs.
 
 
 \subsection*{Criterias and Analysis \textcolor{red}{Oscar?}}
