@@ -332,6 +332,178 @@
       \endverb
       \keyw{Early warning system,Systemic Banking crises,Neural networks,Validation}
     \endentry
+    \entry{vaswani2017attention}{article}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Łukasz},
+           giveni={Ł\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{bibnamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{authorbibnamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{authornamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1706.03762}
+      \field{title}{Attention Is All You Need}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+    \endentry
+    \entry{zhou2021informer}{article}{}
+      \name{author}{7}{}{%
+        {{hash=c7def614c5b94aa5499428a9644f024d}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Haoyi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=452a67ad1218340845acd7e598d57f19}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shanghang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5f7a31c0c9097a50681876d24913ad6f}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Jieqiang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=53eda2415f95a1d1f76572f661905aab}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8fbeb37c67ff4ff3e661cca0af6ba927}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jianhui},
+           giveni={J\bibinitperiod}}}%
+        {{hash=577bc0aa16b7a7bd69da0cecc7962ed9}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Hongkai},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d4d97ecef44bb5d1d6dab7f91276d649}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wancai},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{22874c5c68d02e68715251670c89f8f2}
+      \strng{fullhash}{f97cbd6ddff1fe415c427bb757fa653b}
+      \strng{bibnamehash}{22874c5c68d02e68715251670c89f8f2}
+      \strng{authorbibnamehash}{22874c5c68d02e68715251670c89f8f2}
+      \strng{authornamehash}{22874c5c68d02e68715251670c89f8f2}
+      \strng{authorfullhash}{f97cbd6ddff1fe415c427bb757fa653b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the AAAI Conference on Artificial Intelligence}
+      \field{number}{12}
+      \field{title}{Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting}
+      \field{volume}{35}
+      \field{year}{2021}
+      \field{pages}{11106\bibrangedash 11115}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://ojs.aaai.org/index.php/AAAI/article/view/17325
+      \endverb
+      \verb{url}
+      \verb https://ojs.aaai.org/index.php/AAAI/article/view/17325
+      \endverb
+    \endentry
+    \entry{lim2021temporal}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ae79ceb303df628c5461fb3fda3f01e2}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=72627f6a0d57c6bcb972628b5d434f0e}{%
+           family={Arik},
+           familyi={A\bibinitperiod},
+           given={Sercan\bibnamedelima O},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=18a4513e76c666e3b9c5087af0d2caf3}{%
+           family={Loeff},
+           familyi={L\bibinitperiod},
+           given={Nico},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f769e681ea0c0a3a6ba5a36ddd18c253}{%
+           family={Pfister},
+           familyi={P\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{83b70b3a50958a8859271241f6f9a3b6}
+      \strng{fullhash}{e2c20643cc5c63d1c0046fcab3a47ab9}
+      \strng{bibnamehash}{e2c20643cc5c63d1c0046fcab3a47ab9}
+      \strng{authorbibnamehash}{e2c20643cc5c63d1c0046fcab3a47ab9}
+      \strng{authornamehash}{83b70b3a50958a8859271241f6f9a3b6}
+      \strng{authorfullhash}{e2c20643cc5c63d1c0046fcab3a47ab9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{number}{4}
+      \field{title}{Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting}
+      \field{volume}{37}
+      \field{year}{2021}
+      \field{pages}{1748\bibrangedash 1764}
+      \range{pages}{17}
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.03.012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ijforecast.2021.03.012
+      \endverb
+    \endentry
     \entry{Fonville}{article}{}
       \name{author}{1}{}{%
         {{hash=f6cb9e816cf362309b18d3e534b027d7}{%
@@ -387,9 +559,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{lim2021temporal}
-  \missing{vaswani2017attention}
-  \missing{zhou2021informer}
 \endrefsection
 \endinput
 
