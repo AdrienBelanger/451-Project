@@ -45,7 +45,7 @@ Evaluation Criterias:
 - Coverage (are you adequately covering most relevant works)
 \end{comment}
 
-\subsection*{Background and Introduction}
+\subsubsection*{Background and Introduction}
 The idea of predicting stock market crashes using machine learning techniques is not new.
 Multiple papers have approached stock market crash prediction using Machine Learning techniques. 
 Traditionally, time series analysis has relied on models like Recurrent Neural Networks (RNNs) and ARIMA. More recently, the introduction of Transformer-based architectures has expanded the range of tools available for this approach \cite{Ahmed, ArunKumar}. These models have been retroactively used with success in Market Crash prediction \cite{Okpeke}. 
@@ -98,7 +98,7 @@ Transformers are an ideal choice for predicting trends in volatile time series, 
 
 What's more, the adaptable mathematical design of transformers makes them a powerful tool for predicting any kind of time series, and financial markets are no exception. Zhen Zeng studied the applicability of Transformers combined with RNNs in trend detection specifically for financial time series in his paper \cite{zeng2023financial}. He concluded that combining these two architectures significantly improved forecasting accuracy for intraday stock price movements of S\&P 500 constituents (S\&P 500 refers to the stock market index that tracks the performance of 500 of the largest publicly traded companies in the United States). Hence, the literature suggests that the self-attention mechanism of Transformers makes them a pertinent choice for financial trend forecasting.
 
-\subsection*{Criterias and Analysis}
+\subsubsection*{Criterias and Analysis}
 For this project, we will base our analysis and success criteria on the financial definition of a market crash. A market crash is typically defined as a rapid decline of 20\% or more from a recent peak over a short period \cite{Fonville, Investo}. Our analysis will evaluate models using the following metrics: Mean Absolute Error (MAE) to assess prediction accuracy for time-series data \cite{hyndman2018}, computational efficiency to measure runtime and resource usage for practical feasibility \cite{lim2021temporal}, and precision and recall to evaluate the accuracy of classifying periods as “Crash” or “Non-Crash.” This definition and these metrics provide a robust framework for labeling, training, and evaluating our models.
 
 %For this project, we will base our analysis and success criteria on the financial definition of a market crash. A market crash is typically defined as a rapid decline of 20\% or more from a recent peak over a short %period \cite{Fonville, Investo}. This threshold distinguishes a crash from a correction, which is generally a decline of 10\% to less than 20\%. The "recent peak" refers to the highest market level before the downturn, %and the "short period" often spans days to weeks, though exact durations can vary. Hence, this definition provides us with a concrete framework for labelling market conditions and will allow us to properly train and %evaluate our model."
