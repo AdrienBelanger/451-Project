@@ -45,19 +45,14 @@ Evaluation Criterias:
 - Coverage (are you adequately covering most relevant works)
 \end{comment}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \subsection*{Background and Introduction \textcolor{red}{Oscar, Inigo and Adrien}}
 The idea of predicting stock market crashes using machine learning techniques is not new.
 Multiple papers have approached stock market crash prediction using Machine Learning techniques. 
 Traditionally, time series analysis has relied on models like Recurrent Neural Networks (RNNs) and ARIMA. More recently, the introduction of Transformer-based architectures has expanded the range of tools available for this approach \cite{Ahmed, ArunKumar}. These models have been retroactively used with success in Market Crash prediction \cite{Okpeke}. 
 
 Even though reviews and comparisons of these models have been made, such as \cite{Okpeke}, a comprehensive empirical review of Time-Series Analysis models on equal footing is lacking in the literature. 
-That's why this project aims to address this lack by providing an empirical comparison of the three aforementioned commonly used models in Time-Series Analysis to predict Market Crashes. \cite{Ahmed} \cite{ArunKumar}
-We shall use data freely available on the Yahoo finance database and tag historically factual Market Crashes by hand, as there are only a few. We shall use the crashes as listed in this National Bureau of Economic Research's report. \cite{Mishkin}
+That's why this project aims to address this lack by providing an empirical comparison of the three aforementioned commonly used models in Time-Series Analysis to predict Market Crashes \cite{Ahmed}\cite{ArunKumar}.
+We shall use data freely available on the Yahoo finance database and tag historically factual Market Crashes by hand, as there are only a few. We shall use the crashes as listed in this  National Bureau of Economic Research's report \cite{Mishkin}.
 
 %\subsection*{Background on Time Series and Financial Market Crashes \textcolor{red}{Adrien}}
 
@@ -73,12 +68,7 @@ We shall use data freely available on the Yahoo finance database and tag histori
 %\subparagraph*{}
  %https://oarjst.com/sites/default/files/OARJST-2024-0095.pdf
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-    \subsubsection*{ARIMA on predicting market crash \textcolor{red}{Oscar}}
+\subsubsection*{ARIMA on predicting market crash \textcolor{red}{Oscar}}
 Time series in the stock market are mostly non-stationary, meaning that their statistical properties, such as mean and variance, change over time. While non-stationary series can exhibit local differences in level or trend, certain statistical frameworks, like ARIMA, can often be adapted to capture their behavior \cite{ho2021}.
 In 2015 Box et al. formalized a methodology for applying the Autoregressive Integrated Moving Average (ARIMA) model, which combines an autoregressive component (modeling the relationship between an observation and its past values) with a moving average component (modeling the relationship between an observation and past errors) \cite{box2015}.
 This mechanism makes ARIMA suitable for predicting non-stationary time series, as demonstrated by M. K. Ho et al. in their physics conference paper \cite{ho2021}.
@@ -96,22 +86,12 @@ where
 \end{enumerate}
 }
     The use of ACF (autocorrelation function) and PACF (partial ACF) will help us decide the hyperparameters $p, d, q$ for building our model \cite{hyndman2018}.
-   
-   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
-    \subsubsection*{Reccurent Neural Networks \textcolor{red}{Adrien}}
-    %- Overview of Recurrent Neural Networks (RNNs)
-    Recurrent Neural Networks are a class of neural network architectures designed to detect patterns in sequential data, such as handwriting, genomes, text, or numerical time series. In time-series, they are used to make sequential predictions based on sequential inputs. \cite{Schmidt} In our context, they usually take the form of Long Term Short Memory (LSTM) cells \cite{Hansika}, which we will use in our project, to mitigate the vanishing gradient problem. They do so by having cells with three gates: An input, output and a forget gate combined with a feedback loop to enhance long-term accuracy. These gates help control how the information flows through the network. \cite{Hansika} They have been used in multiple projects accounting to market Crashes, such as this project led by Tolo et al. \cite{Tolo} It is not well established when RNNs and Arimas outperform one another \cite{Hansika}, this project will take a step into clearing up the most appropriate in the context of Market Crashes prediction.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-    \subsubsection*{Transformers \textcolor{red}{Inigo}}
+\subsubsection*{Reccurent Neural Networks}
+%- Overview of Recurrent Neural Networks (RNNs)
+Recurrent Neural Networks are a class of neural network architectures designed to detect patterns in sequential data, such as handwriting, genomes, text, or numerical time series. In time-series, they are used to make sequential predictions based on sequential inputs \cite{Schmidt}. In our context, they usually take the form of Long Term Short Memory (LSTM) cells \cite{Hansika}, which we will use in our project, to mitigate the vanishing gradient problem. They do so by having cells with three gates: An input, output and a forget gate combined with a feedback loop to enhance long-term accuracy. These gates help control how the information flows through the network \cite{Hansika}. They have been used in multiple projects accounting to market Crashes, such as this project led by Tolo et al \cite{Tolo}. It is not well established when RNNs and Arimas outperform one another \cite{Hansika}, this project will take a step into clearing up the most appropriate in the context of Market Crashes prediction.
+
+\subsubsection*{Transformers}
 Transformers are neural network architectures based on self-attention mechanisms. In other words, they are able to weigh the importance of input elements by computing attention scores between all positions. While transformers were originally developed for natural language processing tasks like machine translation \cite{vaswani2017attention}, they have become popular for time-series forecasting due to their ability to handle long-range dependencies.
 
 Transformers are an ideal choice for predicting trends in volatile time series, as they can capture complex temporal patterns by assigning varying importance to different time steps. In fact, Zhou et al. demonstrated this with the "Informer model," which efficiently handles long sequences and improves trend forecasting accuracy using a "self-attention" mechanism \cite{zhou2021informer}. Moreover, Lim et al. were even able to outperform traditional methods (like ARIMA) by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}. 
