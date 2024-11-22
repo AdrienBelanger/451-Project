@@ -2372,17 +2372,24 @@
     <bcf:citekey order="4" intorder="1">Ahmed</bcf:citekey>
     <bcf:citekey order="5" intorder="1">ArunKumar</bcf:citekey>
     <bcf:citekey order="6" intorder="1">Mishkin</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Schmidt</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Hansika</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Hansika</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">Tolo</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Hansika</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">vaswani2017attention</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">zhou2021informer</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">lim2021temporal</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">zeng2023financial</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Fonville</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">Investo</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">ho2021</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">box2015</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">ho2021</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">box2015</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">hyndman2018</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Schmidt</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Hansika</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Hansika</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Tolo</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Hansika</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">vaswani2017attention</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">zhou2021informer</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">lim2021temporal</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">zeng2023financial</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Fonville</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">Investo</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">hyndman2018</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">lim2021temporal</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
