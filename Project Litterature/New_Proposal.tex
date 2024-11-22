@@ -14,10 +14,7 @@
 
 \maketitle
 
-\begin{enumerate}[label=]
-
-    \item \textbf{Background, Motivation, and Project Thesis}
-
+\section*{Background, Motivation, and Project Thesis}
     Predicting financial market crashes has long been an important problem due to the severe consequences of such events. For instance, the crash of 1929 preceded the Great Depression, the most severe economic crisis in history. Modern machine learning techniques can assist economists in predicting crashes and mitigating their effects.
 
     Our project focuses on using time series analysis to predict market crashes, defined as a decline of 20\% or more in a major market index from its recent peak within a short period. We will compare the performance of three widely used models for time-series forecasting: 
@@ -26,9 +23,7 @@
     - Transformer-based architectures.
 
     The goal is to identify which model or combination of models performs best in predicting market crashes.
-
-    \item \textbf{Objectives}
-
+\section*{Objectives}
         \begin{itemize}
             \item[-] Conduct a literature review to identify best practices and previous implementations of ARIMA, RNNs, and Transformers for time series forecasting.
             \item[-] Implement these models and adapt them to the financial crash prediction context.
@@ -41,18 +36,14 @@
               \end{enumerate}
             \item[-] Analyze the results to identify the most favorable approach and compare with findings from existing literature.
         \end{itemize}
-
-    \item \textbf{Success Criteria}
-
+\section*{Success Criteria}
         \begin{enumerate}[label=-]
             \item Successfully implement ARIMA, RNN, and Transformer models with appropriate hyperparameter tuning and preprocessing.
             \item Define and apply a clear evaluation metric, such as F1-score, precision, recall, or mean absolute error (MAE), tailored for time series data.
             \item Models must achieve performance comparable to or better than those reported in the literature.
             \item Provide a detailed empirical comparison that highlights the strengths and weaknesses of each model in different scenarios.
         \end{enumerate}
-
-    \item \textbf{Methodology}
-
+\section*{Methodology}
         To implement our project, we will use a variety of historical financial datasets, such as stock prices, trading volumes, and volatility indices. Our sources include:
         - Yahoo Finance for stock market data and historical prices,
         - Quandl for macroeconomic datasets,
@@ -66,8 +57,7 @@
         - Transformers: We will use self-attention mechanisms for handling long-term dependencies in time series data.
 
         We will use Python libraries such as \texttt{pandas} and \texttt{NumPy} for data preprocessing and \texttt{scikit-learn}, \texttt{TensorFlow}, and \texttt{PyTorch} for model development. Complex models will be trained on cloud platforms like Google Colab or AWS.
-
-    \item \textbf{Evaluation Metrics and Analysis}
+\section*{Evalutaion Metrics and Analysis}
 
         Financial crashes are defined as a rapid decline of 20\% or more from a recent peak over a short period. We will use this definition to label market conditions in the dataset. Evaluation will focus on:
         - Precision and recall for identifying crash periods,
@@ -75,9 +65,7 @@
         - Computational runtime to assess efficiency.
 
         The models will be compared across these metrics under various market conditions to identify their strengths and weaknesses.
-
-    \item \textbf{Project Plan and Timeline}
-    
+\section*{Project Plan and Timeline}
         \begin{enumerate}[label=-]
             \item Literature Review: Identify relevant datasets and models, review prior implementations, and gather expected performance benchmarks. (Deadline: November 8, 2024)
             \item Implementation: Develop and train ARIMA, RNN, and Transformer models with preprocessing and hyperparameter tuning. (Deadline: Mid-November)
@@ -96,12 +84,6 @@
             \draw (\x,0) node[above=5pt] {\y} node[below=5pt] {\label};
           }
         \end{tikzpicture}    
-
-    
-    \item \textbf{Conclusion}
-
+\section*{Conclusion}
     By implementing and comparing ARIMA, RNN, and Transformer models on historical financial data, this project will contribute to the understanding of machine learning applications in financial time series analysis. The findings will provide a comprehensive empirical review and practical guidance for future work in this domain.
-
-\end{enumerate}
-
 \end{document}
