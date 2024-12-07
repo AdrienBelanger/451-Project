@@ -218,3 +218,40 @@ url={https://www.investopedia.com/terms/s/stock-market-crash.asp},
    year={2023},
    url={https://arxiv.org/abs/2304.04912}
 }
+
+@article{sp500arimalstmregression, 
+title={Prediction of SP500 Stock Index Using ARIM and Linear Regression}, 
+volume={38}, url={https://drpress.org/ojs/index.php/HSET/article/view/5848}, DOI={10.54097/hset.v38i.5848}, 
+abstractNote={This paper mainly establishes a linear model suitable for the volatility of the S&P 500 index and forecasts the S&P 500 index. Firstly, the data set is divided into the training set and test set. After testing a series of data attributes such as the smoothness of the original data series and log series, the original data series and log series of the S&P 500 index weekly data series are modeled based on the ARIMA model. The next step is to check the fit of the model and use ACF and PACF to determine the parameters of two different models to fit the original data series and the log data series, respectively. Based on two different models, the rationality of the model is confirmed by the residual white noise test and various natural maps. By establishing the model and analyzing the residual error of the model, finding out unreasonable fluctuation of the residual error of the model fitting and giving the corresponding explanation combined with the history. Finally, a fitted model to make rough forecasts for the S&P 500 from January 2020 to December 2020. Although this forecasting model cannot predict detailed fluctuations daily, it can still correctly determine whether a stock is going up or down. To sum up, the ARIMA model does not perform well in stock forecasting and it may need to be improved using other methods.}, journal={Highlights in Science, Engineering and Technology}, 
+author={Guo, Kefei and Jiang, Zifan and Zhang, Yujian}, year={2023}, 
+month={3}, 
+pages={399–407} }
+
+@article{hochreiter1997,
+    author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+    title = {Long Short-Term Memory},
+    journal = {Neural Computation},
+    volume = {9},
+    number = {8},
+    pages = {1735-1780},
+    year = {1997},
+    month = {11},
+    abstract = {Learning to store information over extended time intervals by recurrent backpropagation takes a very long time, mostly because of insufficient, decaying error backflow. We briefly review Hochreiter's (1991) analysis of this problem, then address it by introducing a novel, efficient, gradient based method called long short-term memory (LSTM). Truncating the gradient where this does not do harm, LSTM can learn to bridge minimal time lags in excess of 1000 discrete-time steps by enforcing constant error flow through constant error carousels within special units. Multiplicative gate units learn to open and close access to the constant error flow. LSTM is local in space and time; its computational complexity per time step and weight is O. 1. Our experiments with artificial data involve local, distributed, real-valued, and noisy pattern representations. In comparisons with real-time recurrent learning, back propagation through time, recurrent cascade correlation, Elman nets, and neural sequence chunking, LSTM leads to many more successful runs, and learns much faster. LSTM also solves complex, artificial long-time-lag tasks that have never been solved by previous recurrent network algorithms.},
+    issn = {0899-7667},
+    doi = {10.1162/neco.1997.9.8.1735},
+    url = {https://doi.org/10.1162/neco.1997.9.8.1735},
+    eprint = {https://direct.mit.edu/neco/article-pdf/9/8/1735/813796/neco.1997.9.8.1735.pdf},
+}
+
+@article{greff2017,
+   title={LSTM: A Search Space Odyssey},
+   volume={28},
+   ISSN={2162-2388},
+   url={http://dx.doi.org/10.1109/TNNLS.2016.2582924},
+   DOI={10.1109/tnnls.2016.2582924},
+   number={10},
+   journal={IEEE Transactions on Neural Networks and Learning Systems},
+   publisher={Institute of Electrical and Electronics Engineers (IEEE)},
+   author={Greff, Klaus and Srivastava, Rupesh K. and Koutnik, Jan and Steunebrink, Bas R. and Schmidhuber, Jurgen},
+   year={2017},
+   month=oct, pages={2222–2232} }
