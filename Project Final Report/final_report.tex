@@ -13,6 +13,14 @@ style=ieee,
 sorting=none,
 ]{biblatex}
 \addbibresource{final_bibliography.bib}
+\usepackage{graphicx}
+\graphicspath{{../pdf/}{figures}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\usepackage{subcaption}
+\usepackage{float}
+
+
+
 
 \title{
     Empirical Review of Models used for Predicting Financial Market Crashes Using Market Data 
@@ -209,7 +217,39 @@ Overall, we expect ARIMA to do good on longer sequences \cite{ho2021}. We expect
 \pagebreak
 \subsection*{Appendix}
 \begin{enumerate}
-    \item Link to Github with the code: https://github.com/AdrienBelanger/451-Project 
+    \item Link to the gitHub repository with the code: \url{https://github.com/AdrienBelanger/451-Project}
+    \item Figure 1: Experiment 1 Result plots 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.9\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{exp1_figure.png}
+            \caption{Figure 1: Experiment 1 Comparison Plot}
+        \end{subfigure}
+        \hfill
+    \end{figure}
+
+    \item Figure 2: Experiment 2 Result plots 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.9\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{exp2_figure.png}
+            \caption{Figure 2: Experiment 2 Comparison Plot}
+        \end{subfigure}
+        \hfill
+    \end{figure}
+
+    \item Figure 3: Experiment 3 Result plots 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.9\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{exp3_figure.png}
+            \caption{Figure 3: Experiment 3 Comparison Plot}
+        \end{subfigure}
+        \hfill
+    \end{figure}
 \end{enumerate}
 
 \printbibliography
