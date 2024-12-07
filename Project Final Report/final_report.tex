@@ -38,9 +38,23 @@ sorting=none,
 
 \subsection*{Introduction \textcolor{red}{Inigo}}
 
-The volatility and complexity of financial markets have always been a significant challenge for the management of modern economies. For instance, the abrupt declines in the markets, often known in finance as crashes, can lead to widespread financial losses, economic recessions, and a loss of confidence in the stability of financial systems. The idea of being able to anticipate and predict such market fluctuations is not new and has been widely studied from a mathematical point of view. However, conventional methods used by econometricians for time series analysis, such as Linear Trend Projection or Weighted Moving Average, may be effective for markets with general stationary trends but lack effectiveness for highly volatile ones. Modern machine learning techniques, particularly those involving neural networks and attention-based architectures, may provide a new pathway to surpassing these traditional techniques.
-In this project, we propose to make an extensive comparative study of the effectiveness of 3 of the most widely used methods for Time series forecasting today: Recurrent Neural Networks (RNNs), Transformer-based architectures, and the Autoregressive Integrated Moving Average (ARIMA) model. Each of these models is developed with a distinct methodological perspective. ARIMA models, based on classic statistics and linear algebra concepts, have long been a go-to tool for time series forecasting. RNNs, specifically Long Short-Term Memory (LSTM) networks, offer a non-linear and data-driven alternative that can capture long-range dependencies while reducing issues of vanishing or exploiting gradients. Transformers, which introduce attention mechanisms, aim to further improve predictive capabilities by focusing selectively on critical segments of past information, often achieving state-of-the-art performance in various sequential prediction tasks.
-Our main objective is then to develop each of these models and subject them to a series of tests using real historical financial data to determine their effectiveness in predicting financial crashes. Although the world of finance is changing, and there are no specific parameters since each financial market is governed by its own rules, we will test each of these models under the same conditions and thus establish an empirical review to provide clear insights into the strengths and limitations of each methodology. We aim to guide researchers and practitioners in selecting suitable models for short-term market crash prediction, ultimately contributing to more robust risk management strategies.
+The volatility and complexity of financial markets have always been a significant challenge for the management of modern economies. 
+For instance, the abrupt declines in the markets, often known in finance as crashes, can lead to widespread financial losses, economic recessions, and a loss of confidence in the stability of financial systems. 
+
+The idea of being able to anticipate and predict such market fluctuations is not new and has been widely studied from a mathematical point of view. 
+However, conventional methods used by econometricians for time series analysis, such as Linear Trend Projection or Weighted Moving Average, may be effective for markets with general stationary trends but lack effectiveness for highly volatile ones. 
+Modern machine learning techniques, particularly those involving neural networks and attention-based architectures, may provide a new pathway to surpassing these traditional techniques.
+
+In this project, we propose to make an extensive comparative study of the effectiveness of 3 of the most widely used methods for Time series forecasting today: Recurrent Neural Networks (RNNs), Transformer-based architectures, and the Autoregressive Integrated Moving Average (ARIMA) model. 
+
+Each of these models is developed with a distinct methodological perspective. 
+ARIMA models, based on classic statistics and linear algebra concepts, have long been a go-to tool for time series forecasting. 
+RNNs, specifically Long Short-Term Memory (LSTM) networks, offer a non-linear and data-driven alternative that can capture long-range dependencies while reducing issues of vanishing or exploiting gradients. 
+Transformers, which introduce attention mechanisms, aim to further improve predictive capabilities by focusing selectively on critical segments of past information, often achieving state-of-the-art performance in various sequential prediction tasks.
+
+Our main objective is then to develop each of these models and subject them to a series of tests using real historical financial data to determine their effectiveness in predicting financial crashes. 
+
+Although the world of finance is changing, and there are no specific parameters since each financial market is governed by its own rules, we will test each of these models under the same conditions and thus establish an empirical review to provide clear insights into the strengths and limitations of each methodology. We aim to guide researchers and practitioners in selecting suitable models for short-term market crash prediction, ultimately contributing to more robust risk management strategies.
 
 
 
@@ -57,17 +71,15 @@ Our main objective is then to develop each of these models and subject them to a
     Zhen Zeng studied the applicability of Transformers combined with RNNs in trend detection specifically for financial time series in his paper \cite{zeng2023financial}. He concluded that combining these two architectures significantly improved forecasting accuracy for intraday stock price movements of the SP500.
     \paragraph*{}
     % Explore definitions of market crashes and which data was used
-    Market Crashes do not hold a single definition. While historical data tags specific periods as depressions and bubbles, there are no specific metrics that are universally defined \cite{Fonville, Investo}. 
+    Market Crashes do not hold a single definition. While historical data tags specific periods as depressions and bubbles, there are no specific metrics that are universally defined. Some have defined it as a rapid decline of 20\% or more from a recent peak over a short period \cite{Fonville, Investo}. Others still have defined them as a drawdown of 99.5\% quantile \cite{99.5quantile}.
     \paragraph*{}
     % Explore models implementation
     %%% RNN
     
-
     Time series in the stock market often exhibit complex trends and non-linear patterns. 
     Long Short-Term Memory (LSTM) Recurrent Neural Networks (RNN) are designed to learn long-term trends in sequential data, making them very good at modeling and forecasting financial market time series \cite{hochreiter1997, greff2017}.
 
     LSTM networks address the vanishing gradient problem encountered in standard RNNs on this type of data by introducing specialized LSTM cells. These cells incorporate gates to control flow, allowing LSTMs to forget and remember information over long sequences \cite{hochreiter1997}.
-
 
     The LSTM cell can be defined as follows \cite{hochreiter1997}:
 
@@ -75,9 +87,9 @@ Our main objective is then to develop each of these models and subject them to a
     i_t &= \sigma(W_i x_t + U_i h_{t-1} + b_i), \\ f_t &= \sigma(W_f x_t + U_f h_{t-1} + b_f), \\ o_t &= \sigma(W_o x_t + U_o h_{t-1} + b_o), \\ \tilde{c}t &= \tanh(W_c x_t + U_c h{t-1} + b_c), \\ c_t &= f_t \cdot c_{t-1} + i_t \cdot \tilde{c}_t, \\ h_t &= o_t \cdot \tanh(c_t), 
 \end{align*}
 
-where:
+where
 
-\begin{itemize}
+\begin{enumerate}[label=-]
     \item $x_t$ is the input at time $t$, representing market data (e.g., stock price, volume),
     \item $h_{t-1}$ is the hidden state (output) of the previous time step,
     \item $i_t$, $f_t$, $o_t$ are the input gate, forget gate, and output gate
@@ -85,7 +97,7 @@ where:
     \item $c_t$ is the cell state at time $t$, capturing long-term dependencies,
     \item $W$ and $U$ are the weight matrices and b is the bias vector,
     \item $\sigma$ is the sigmoid activation function
-\end{itemize}
+\end{enumerate}
 
 The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-1}$ is retained. The \textit{input} gate $i_t$ updates the cell with new information. The \textit{output} gate $o_t$ controls the hidden state, which is the LSTM output at time $t$ \cite{hochreiter1997}.
 
@@ -102,7 +114,7 @@ The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-
         \varphi (B) z_t = \phi (B)\nabla^d z_t = \theta_0 + \theta (B)a_t
     \end{align*}
     where
-    \begin{enumerate}[label=\arabic*.]
+    \begin{enumerate}[label=-]
         \item $\phi(B)$ is the autoregressive part with $p$ degrees,
         \item $\theta (B)$ is the moving average part with $q$ degrees,
         \item $\nabla$ is the integrated (degree of differencing) part with $d$ degrees,
@@ -115,16 +127,28 @@ The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-
     \
 
     %%% TRANSFORMERS
-    Transformers are based on self-attention mechanisms. They are able to weigh the importance of input elements by computing \textit{attention scores}. While transformers were originally developed for natural language processing tasks, they have become popular for time-series forecasting due to their ability to handle long-range dependencies \cite{vaswani2017attention}.
-
-    This makes transformers an ideal choice for predicting trends in volatile time series, as they can capture complex temporal patterns by assigning varying importance to different time steps. 
-
-    Their adaptable mathematical design makes them a powerful tool for predicting any kind of time series. Financial markets are no exception. Hence, the literature suggests that the self-attention mechanism of Transformers makes them a pertinent choice for financial trend forecasting.
+    Transformers are based on self-attention mechanisms. They are able to weigh the importance of input elements by computing \textit{attention scores}.
+    While transformers were originally developed for natural language processing tasks, they have become popular for time-series forecasting due to their ability to handle long-range dependencies \cite{vaswani2017attention}.
 
 
 
-    \paragraph*{}
-    % Explore analysis criteria 
+    Unlike RNNs, Transformers process all steps at the same time, enabling parallel computation and improved efficiency for long-range dependency learning \cite{vaswani2017attention}.
+
+The core attention scoring by scaled dotv product is defined as \cite{vaswani2017attention}:
+{\small \begin{align*} \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V, \end{align*} }
+where:
+\begin{enumerate}[label=-] \item $Q$ (queries), $K$ (keys), and $V$ (values) are linear projections of the input data,
+\item  is the dimension of the key vectors,
+\item The softmax function ensures that attention scores are normalized.
+\end{enumerate}
+
+Transformers eliminate the need for recurrent connections by relying entirely on attention mechanisms. This allows them model long-range dependencies more effectively than RNNs, which sometimes struggle with sequential bottlenecks and vanishing gradients \cite{vaswani2017attention}.
+
+While originally developed for natural language processing tasks, Transformers have been increasingly applied to time-series forecasting \cite{zeng2023financial}.
+Given the volatility and complexity of financial markets, their ability to capture complex patterns makes them an ideal choice for financial market forecasting \cite{wu2020deep}.
+
+\paragraph*{}
+% Explore analysis criteria 
     Drastic market crashes are rare [cite]. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint. Other methods are thus needed to evaluate the models. Others in litterature have used many methods, such as evaluating true positives and true negatives [cite]. Other have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
 
 \subsection*{Methodology \textcolor{cyan}{Adrien for market crash and Experiment choice} \textcolor{violet}{Everyone for their assigned model}}
