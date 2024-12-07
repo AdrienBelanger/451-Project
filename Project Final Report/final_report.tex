@@ -149,18 +149,28 @@ Given the volatility and complexity of financial markets, their ability to captu
 
 \paragraph*{}
 % Explore analysis criteria 
-    Drastic market crashes are rare [cite]. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint. Other methods are thus needed to evaluate the models. Others in litterature have used many methods, such as evaluating true positives and true negatives [cite]. Other have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
+    Drastic market crashes are rare. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint \cite{market_infrequent}. Other methods are thus needed to evaluate the models. Others in litterature have used many methods, such as evaluating true positives and true negatives \cite{true_positive}. Other have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
 
 \subsection*{Methodology \textcolor{cyan}{Adrien for market crash and Experiment choice} \textcolor{violet}{Everyone for their assigned model}}
 % (Our models and market crash definition, how they work, why we chose them, the experiments we chose and why we chose them) + HYPOTHESIS on each experiment
-\subsubsection*{Definitions used in our project}
+Note: All code can be found in the gitHub repository linked in the Appendix.
+\subsubsection*{Definitions and Metrics used in our project}
 
+For our project, we use an LSTM-based RNN, Transformers and ARIMA to predict whether there will be a crash in the next x days based on the past y days. We defined crash as a 99.5\% quantile drawdown within a day. This gave us around 26 crashes in the test data.
+
+To evaluate our models, we will measure the number of Predicted crashes against the real number of crashes. We will also check the number of false alarms and missed crashes. Finally, we will evaluate the training and resource usage time of all three models for each experiment.
 
 \subsubsection*{Database and preprocessing}
 
+We pulled the code from the SP500 public data available on Yahoo Finance financial data library. From there, we preprocessed the code by labelling crashes in the database.
+
+Our code made use of a sliding window for the sequence length. Then, we created batches of datapoints of size 20. We then tried to predict if there would be a crash in the following shift days, which was a hyperparameter. For example, we could have a 15 day sliding window to predict if there would be a crash in the 3 days after those 15 days. 
+This made the problem one of binary classification, which was simple and efficient to process, and made for easy comparison.
+
 \subsubsection*{RNN Implementation}
 
-Our RNN code was based on the \textit{Keras} Sequential model, using the pre-made LSTM layers \cite{keras2024lstm,keras2024sequential}. This was used since our project aimed to be a comparison, and not one of implementation. The c
+Our RNN code was based on the \textit{Keras} Sequential model, using the pre-made LSTM layers \cite{keras2024lstm,keras2024sequential}. This was used since our project aimed to be a comparison, and not one of implementation. 
+The code used two LSTM layers of 50 units each, then a dense layer with a sigmoid activation layer for binary classification. We then used the adam optimizer with a binary cross-entropy loss function to train our binary model.
 
 \subsubsection*{ARIMA Implementation}
 
@@ -168,10 +178,15 @@ Our RNN code was based on the \textit{Keras} Sequential model, using the pre-mad
 
 \subsubsection*{Experiments}
     \begin{enumerate}
-        \item Adrien - 30 days sliding window, 14 days shift days
+        \item 30 days sliding window, 14 days shift days
+            
+            Hypothesis: Here, we expect Transformers to profit from the larger sliding window, surpassing the performance of RNNs \cite{greff2017, sp500arimalstmregression}. We expect ARIMA to have the best performance of all three experiments in this one, as it has the most context and does better with more data \cite{ho2021}.
         \item Oscar - 14 days sliding window, 7 days shift days
         \item Inigo - 7 days sliding window, 3 days shift days
     \end{enumerate}
+
+    
+Overall, we expect ARIMA to do good on longer sequences \cite{ho2021}. We expect RNNs to do the best with the low context of the third experiment \cite{Hansika}. Transformers should excell in higher context windows, and fall slightly behind RNNs in the third experiment. Because of the short-term nature of the experiments, we expect ARIMA to be behind the other two models in all three experiment, given the low context.
 \subsection*{Empirical Evaluation \textcolor{green}{Oscar}}
 % (plots, statements of comparison (without committing to a full-depth comparison, thats in discussion) of all the experiments)
 \subsection*{Discussion \textcolor{violet}{Everyone discusses their experiment}}
@@ -193,5 +208,9 @@ Our RNN code was based on the \textit{Keras} Sequential model, using the pre-mad
 
 \pagebreak
 \subsection*{Appendix}
+\begin{enumerate}
+    \item Link to Github with the code: https://github.com/AdrienBelanger/451-Project 
+\end{enumerate}
+
 \printbibliography
 \end{document}
