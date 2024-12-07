@@ -50,17 +50,50 @@ sorting=none,
     % COMPAre OTHER ARTICLES that did this
     One article compared Linear Regression and Autoregressive Moving Average (ARIMA) to predict the volatility and trend of SP500. \cite{sp500arimalstmregression}. 
     Key-findings show that ARIMA struggled on short term predictions, particularly during the 1930s and 2020 volatile markets. 
+    
+    Zhou et al. demonstrated that transformers handle long-term dependencies well with the "Informer model," which efficiently handles long sequences and improves trend forecasting accuracy using a "self-attention" mechanism \cite{zhou2021informer}. Moreover, Lim et al. were even able to outperform traditional methods (like ARIMA) by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}. 
+    
+    Zhen Zeng studied the applicability of Transformers combined with RNNs in trend detection specifically for financial time series in his paper \cite{zeng2023financial}. He concluded that combining these two architectures significantly improved forecasting accuracy for intraday stock price movements of the SP500.
     \paragraph*{}
     % Explore definitions of market crashes and which data was used
     Market Crashes do not hold a single definition. While historical data tags specific periods as depressions and bubbles, there are no specific metrics that are universally defined \cite{Fonville, Investo}. 
     \paragraph*{}
     % Explore models implementation
     %%% RNN
-    This project uses an Long Short Term Memory (LSTM) RNN to make Time-Series predictions. This model has been used for this many times before, and is a sure way to get reliable results [cite]. 
+    
 
+    Time series in the stock market often exhibit complex trends and non-linear patterns. 
+    Long Short-Term Memory (LSTM) Recurrent Neural Networks (RNN) are designed to learn long-term trends in sequential data, making them very good at modeling and forecasting financial market time series \cite{hochreiter1997, greff2017}.
+
+    LSTM networks address the vanishing gradient problem encountered in standard RNNs on this type of data by introducing specialized LSTM cells. These cells incorporate gates to control flow, allowing LSTMs to forget and remember information over long sequences \cite{hochreiter1997}.
+
+
+    The LSTM cell can be defined as follows \cite{hochreiter1997}:
+
+\begin{align*} 
+    i_t &= \sigma(W_i x_t + U_i h_{t-1} + b_i), \\ f_t &= \sigma(W_f x_t + U_f h_{t-1} + b_f), \\ o_t &= \sigma(W_o x_t + U_o h_{t-1} + b_o), \\ \tilde{c}t &= \tanh(W_c x_t + U_c h{t-1} + b_c), \\ c_t &= f_t \cdot c_{t-1} + i_t \cdot \tilde{c}_t, \\ h_t &= o_t \cdot \tanh(c_t), 
+\end{align*}
+
+where:
+
+\begin{itemize}
+    \item $x_t$ is the input at time $t$, representing market data (e.g., stock price, volume),
+    \item $h_{t-1}$ is the hidden state (output) of the previous time step,
+    \item $i_t$, $f_t$, $o_t$ are the input gate, forget gate, and output gate
+    \item $\tilde{c}_t$ is the candidate memory cell state,
+    \item $c_t$ is the cell state at time $t$, capturing long-term dependencies,
+    \item $W$ and $U$ are the weight matrices and b is the bias vector,
+    \item $\sigma$ is the sigmoid activation function
+\end{itemize}
+
+The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-1}$ is retained. The \textit{input} gate $i_t$ updates the cell with new information. The \textit{output} gate $o_t$ controls the hidden state, which is the LSTM output at time $t$ \cite{hochreiter1997}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \
     
     %%% ARIMA
-    Time series in the stock market are non-stationary. Their statistical properties thus change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}. A mehodology formalized by Box et Al. in 2015 to apply the ARIMA model with a moving average component \cite{box2015}.
+    Time series in the stock market are non-stationary, which means that their statistical properties (Avg, median) change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}. A mehodology formalized by Box et Al. in 2015 to apply the ARIMA model with a moving average component \cite{box2015}.
     This makes ARIMA suitable for predicting non-stationary time series, such as financial markets, as demonstrated by M. K. Ho et al. in their paper \cite{ho2021}.
     The ARIMA model is defined mathematically as \cite{box2015}:
     {\small
@@ -81,7 +114,12 @@ sorting=none,
     \
 
     %%% TRANSFORMERS
-    Transformers are cool
+    Transformers are based on self-attention mechanisms. They are able to weigh the importance of input elements by computing \textit{attention scores}. While transformers were originally developed for natural language processing tasks, they have become popular for time-series forecasting due to their ability to handle long-range dependencies \cite{vaswani2017attention}.
+
+    This makes transformers an ideal choice for predicting trends in volatile time series, as they can capture complex temporal patterns by assigning varying importance to different time steps. 
+
+    Their adaptable mathematical design makes them a powerful tool for predicting any kind of time series. Financial markets are no exception. Hence, the literature suggests that the self-attention mechanism of Transformers makes them a pertinent choice for financial trend forecasting.
+
 
 
     \paragraph*{}
