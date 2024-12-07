@@ -14,7 +14,11 @@ sorting=none,
 ]{biblatex}
 \addbibresource{final_bibliography.bib}
 
-\title{Empirical Review of Models used for Predicting Financial Market Crashes Using Market Data \\[1em] \large Project: Final Report}
+\title{
+    Empirical Review of Models used for Predicting Financial Market Crashes Using Market Data 
+    \vspace{1em} \\
+    {\large Project: Final Report}
+}
 \author{\normalsize Ping-Chieh Tu \\ Adrien Bélanger \\ Inigo Torres}
 \date{\vspace{2em} November 22$^{\text{nd}}$ 2024}
 
@@ -32,54 +36,67 @@ sorting=none,
 \end{titlepage}
 \pagebreak
 
-\subsubsection*{Introduction \textcolor{red}{Inigo}}
+\subsection*{Introduction \textcolor{red}{Inigo}}
 
-\subsubsection*{Litterature Review \textcolor{cyan}{Adrien}}
+**thesis statement**
 
-\subsubsection*{Methodology \textcolor{cyan}{Adrien for market crash and Experiment choice} \textcolor{violet}{Everyone for their assigned model}}
+% Project in context, give background on what is a market crash, etc Inigo (?)
+
+
+\subsection*{Litterature Review \textcolor{cyan}{Adrien}}
+% (Where does our project fit in context of  other articles)
+    We are not the first to attempt to compare ML models performance on their prediction of market crashes using SP500 historical data. Multiple approaches have been tried and tested. Time series analysis has used ARIMA and RNN based models, with the more recent addition of Transformers boosting and improving their performance  \cite{Okpeke, Ahmed, ArunKumar}. Reviews of these models have been done before, but the comparison of these three models on short-term prediction using very recent market data is lacking in litterature. 
+    \paragraph*{}
+    % COMPAre OTHER ARTICLES that did this
+    One article compared Linear Regression and ARIMA to predict the volatility and trend of SP500. \cite{sp500arimalstmregression}. 
+    Key-findings show that ARIMA struggled on short term predictions, particularly during the 1930s and 2020 volatile markets. 
+    \paragraph*{}
+    % Explore definitions of market crashes and which data was used
+    Market Crashes do not hold a single definition. While historical data tags specific periods as depressions and bubbles, there are no specific metrics that are universally defined \cite{Fonville, Investo}. 
+    \paragraph*{}
+    % Explore models implementation
+    %%% RNN
+    RNNs are cool
+
+    
+    %%% ARIMA
+    Time series in the stock market are non-stationary. Their statistical properties thus change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}.
+
+    %%% TRANSFORMERS
+    Transformers are cool
+
+    
+    \paragraph*{}
+    % Explore analysis criteria 
+    Drastic market crashes are rare [cite]. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint. Other methods are thus needed to evaluate the models. Others in litterature have used many methods, such as evaluating true positives and true negatives [cite]. Other have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
+
+\subsection*{Methodology \textcolor{cyan}{Adrien for market crash and Experiment choice} \textcolor{violet}{Everyone for their assigned model}}
+% (Our models and market crash definition, how they work, why we chose them, the experiments we chose and why we chose them) + HYPOTHESIS on each experiment
+
+\subsubsection*{RNN Implementation}
+
+\subsubsection*{ARIMA Implementation}
+
+\subsubsection*{Transformers Implementation}
     \begin{enumerate}
-        \item Adrien - Sliding window variation
-            \begin{enumerate}
-                \item Exp 1 - 30 days
-                \item Exp 2 - 14 days
-                \item Exp 3 - 7 days
-            \end{enumerate}
-        \item Oscar - Shift days variation
-            \begin{enumerate}
-                \item Exp 1 - 3 days
-                \item Exp 2 - 7 days
-                \item Exp 2 - 14 days
-            \end{enumerate}
-        \item Inigo - Combination
-            \begin{enumerate}
-                \item Exp 1 - Window: X days; Shift days: Y days
-                \item Exp 2 - Window: X days; Shift days: Y days
-                \item Exp 3 - Window: X days; Shift days: Y days
-            \end{enumerate}
+        \item Adrien - 30 days sliding window, 14 days shift days
+        \item Oscar - 14 days sliding window, 7 days shift days
+        \item Inigo - 7 days sliding window, 3 days shift days
     \end{enumerate}
-\subsubsection*{Empirical Evaluation \textcolor{green}{Oscar}}
-
-\subsubsection*{Discussion \textcolor{violet}{2 Experiments each}}
-
-
-
-\subsubsection*{Conclusion \textcolor{violet}{Everyone does the conclusion for their own experiments}}
-
-\subsubsection*{Future Directions \textcolor{red}{Inigo}}
-
-\subsubsection*{Self-Assessment \textcolor{green}{Oscar}}
-
-\subsubsection*{Contributions \textcolor{violet}{Everyone writes their own contribution}}
+\subsection*{Empirical Evaluation \textcolor{green}{Oscar}}
+% (plots, statements of comparison (without committing to a full-depth comparison, thats in discussion) of all the experiments)
+\subsection*{Discussion \textcolor{violet}{2 Experiments each}}
+% (discussing the results and comparing them and conclude on our hypothesis)
+\subsection*{Conclusion \textcolor{violet}{Everyone does the conclusion for their own experiments}}
+%  (Our conclusion on our results, so how each model fared, how fast they trained, how efficiently, which model we think is best in each context, etc)
+\subsection*{Future Directions \textcolor{red}{Inigo}}
+% (where we could take this project next, how we could improve it etc)
+\subsection*{Self-Assessment \textcolor{green}{Oscar}}
+% (how we feel about the project, what would we have done differently etc.)
+\subsection*{Contributions \textcolor{violet}{Everyone writes their own contribution}}
 % contributions: contributions of each member to the report. If there is a disagreement, you can inlcude a longer contribution section in the appendix where each member explains their version.
 
-
-
-
-
 \pagebreak
-\subsubsection*{Appendix}
-% Include the link to our Jupyter Notebooks for each implementation
-\cite{Ahmed} % just so print biblio doesnt throw an error until we start writing
+\subsection*{Appendix}
 \printbibliography
-
 \end{document}
