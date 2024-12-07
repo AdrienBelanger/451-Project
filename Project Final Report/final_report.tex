@@ -48,7 +48,7 @@ sorting=none,
     We are not the first to attempt to compare ML models performance on their prediction of market crashes using SP500 historical data. Multiple approaches have been tried and tested. Time series analysis has used ARIMA and RNN based models, with the more recent addition of Transformers boosting and improving their performance  \cite{Okpeke, Ahmed, ArunKumar}. Reviews of these models have been done before, but the comparison of these three models on short-term prediction using very recent market data is lacking in litterature. 
     \paragraph*{}
     % COMPAre OTHER ARTICLES that did this
-    One article compared Linear Regression and ARIMA to predict the volatility and trend of SP500. \cite{sp500arimalstmregression}. 
+    One article compared Linear Regression and Autoregressive Moving Average (ARIMA) to predict the volatility and trend of SP500. \cite{sp500arimalstmregression}. 
     Key-findings show that ARIMA struggled on short term predictions, particularly during the 1930s and 2020 volatile markets. 
     \paragraph*{}
     % Explore definitions of market crashes and which data was used
@@ -60,24 +60,43 @@ sorting=none,
 
     
     %%% ARIMA
-    Time series in the stock market are non-stationary. Their statistical properties thus change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}.
+    Time series in the stock market are non-stationary. Their statistical properties thus change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}. A mehodology formalized by Box et Al. in 2015 to apply the ARIMA model with a moving average component \cite{box2015}.
+    This makes ARIMA suitable for predicting non-stationary time series, such as financial markets, as demonstrated by M. K. Ho et al. in their paper \cite{ho2021}.
+    The ARIMA model is defined mathematically as \cite{box2015}:
+    {\small
+    \begin{align*}
+        \varphi (B) z_t = \phi (B)\nabla^d z_t = \theta_0 + \theta (B)a_t
+    \end{align*}
+    where
+    \begin{enumerate}[label=\arabic*.]
+        \item $\phi(B)$ is the autoregressive part with $p$ degrees,
+        \item $\theta (B)$ is the moving average part with $q$ degrees,
+        \item $\nabla$ is the integrated (degree of differencing) part with $d$ degrees,
+        \item and $\theta_0$ is the constant term.
+    \end{enumerate}
+    }
 
+    The use of ACF (autocorrelation function) and PACF (partial ACF) will help us decide the hyperparameters $p, d, q$ for building our model \cite{hyndman2018}, and performing Grid-Search on the specific hyperparameters will help us pin point the exact best accuracy we can get.
     %%% TRANSFORMERS
     Transformers are cool
 
-    
+
     \paragraph*{}
     % Explore analysis criteria 
     Drastic market crashes are rare [cite]. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint. Other methods are thus needed to evaluate the models. Others in litterature have used many methods, such as evaluating true positives and true negatives [cite]. Other have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
 
 \subsection*{Methodology \textcolor{cyan}{Adrien for market crash and Experiment choice} \textcolor{violet}{Everyone for their assigned model}}
 % (Our models and market crash definition, how they work, why we chose them, the experiments we chose and why we chose them) + HYPOTHESIS on each experiment
+\subsubsection*{Definitions used in our project}
+
 
 \subsubsection*{RNN Implementation}
 
 \subsubsection*{ARIMA Implementation}
 
 \subsubsection*{Transformers Implementation}
+
+\subsubsection*{Experiments}
     \begin{enumerate}
         \item Adrien - 30 days sliding window, 14 days shift days
         \item Oscar - 14 days sliding window, 7 days shift days
@@ -85,7 +104,7 @@ sorting=none,
     \end{enumerate}
 \subsection*{Empirical Evaluation \textcolor{green}{Oscar}}
 % (plots, statements of comparison (without committing to a full-depth comparison, thats in discussion) of all the experiments)
-\subsection*{Discussion \textcolor{violet}{2 Experiments each}}
+\subsection*{Discussion \textcolor{violet}{Everyone discusses their experiment}}
 % (discussing the results and comparing them and conclude on our hypothesis)
 \subsection*{Conclusion \textcolor{violet}{Everyone does the conclusion for their own experiments}}
 %  (Our conclusion on our results, so how each model fared, how fast they trained, how efficiently, which model we think is best in each context, etc)
@@ -95,6 +114,12 @@ sorting=none,
 % (how we feel about the project, what would we have done differently etc.)
 \subsection*{Contributions \textcolor{violet}{Everyone writes their own contribution}}
 % contributions: contributions of each member to the report. If there is a disagreement, you can inlcude a longer contribution section in the appendix where each member explains their version.
+\begin{enumerate}
+    \item Adrien - 
+        For the report, my main contributions were for writing the Litterature Review and parts of the Methodology, Discussion and Conclusion. I've also contributed to the code by implementing the RNN model, consolidating the three models in a notebook and helping design the experiments.
+    \item Ping-Chieh
+    \item Inigo
+\end{enumerate}
 
 \pagebreak
 \subsection*{Appendix}
