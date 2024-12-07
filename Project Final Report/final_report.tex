@@ -202,7 +202,11 @@ Overall, we expect ARIMA to do good on longer sequences \cite{ho2021}. We expect
 \subsection*{Discussion \textcolor{violet}{Everyone discusses their experiment}}
 % (discussing the results and comparing them and conclude on our hypothesis)
 
+The results of Experiment 1, on Figure 1, present a highly skewed report. While the RNN and the Transformers performed relatively similarly, with maybe slightly better overall performance on the part of the Transformers.
 
+However, ARIMA performed very much underwhelmingly, with a prediction of over 3682 crashes. This makes 3087 false alarms, compared to 5 for RNNs and 3 for transformers. This shows that ARIMA struggled deeply with this experiment. This could be because of the way the experiment was set-up: as mentionned, ARIMA is a statistical model which needs more data to predict correctly.
+
+While these results do go with our Hypothesis, it would be unfair to say we can conclude positively on this experiment. The ARIMA model performed much under our expectation. The RNN and 
 
 \subsection*{Conclusion \textcolor{violet}{Everyone does the conclusion for their own experiments} \textcolor{red}{Inigo for the overall conclusion (with the equation you wanted)}}
 %  (Our conclusion on our results, so how each model fared, how fast they trained, how efficiently, which model we think is best in each context, etc)
