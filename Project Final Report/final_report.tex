@@ -44,7 +44,7 @@ sorting=none,
 \end{titlepage}
 \pagebreak
 
-\subsection*{Introduction \textcolor{red}{Inigo}}
+\subsection*{Introduction}
 
 The volatility and complexity of financial markets have always been a significant challenge for the management of modern economies. 
 For instance, the abrupt declines in the markets, often known in finance as crashes, can lead to widespread financial losses, economic recessions, and a loss of confidence in the stability of financial systems. 
@@ -66,7 +66,7 @@ Although the world of finance is changing, and there are no specific parameters 
 
 
 
-\subsection*{Background \& Litterature Review \textcolor{cyan}{Adrien}}
+\subsection*{Background \& Litterature Review}
 % (Where does our project fit in context of  other articles)
     We are not the first to attempt to compare ML model's performance on their prediction of market crashes using SP500 historical data. 
     Multiple approaches have been tried and tested. Time series analysis has used ARIMA and RNN based models, with the more recent addition of Transformers boosting and improving their performance  \cite{Okpeke, Ahmed, ArunKumar}. 
@@ -167,7 +167,7 @@ Given the volatility and complexity of financial markets, their ability to captu
 % Explore analysis criteria 
     Drastic market crashes are rare. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint \cite{market_infrequent}. Other methods are thus needed to evaluate the models. Others in literature have used many methods, such as evaluating true positives and true negatives \cite{true_positive}. Others have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
 
-\subsection*{Methodology \textcolor{cyan}{Adrien for market crash and Experiment choice} \textcolor{violet}{Everyone for their assigned model}}
+\subsection*{Methodology}
 % (Our models and market crash definition, how they work, why we chose them, the experiments we chose and why we chose them) + HYPOTHESIS on each experiment
 Note: All code can be found in the gitHub repository linked in the Appendix.
 \subsubsection*{Definitions and Metrics used in our project}
@@ -206,11 +206,11 @@ For our Transformer-based neural network architecture, we defined a positional e
 
     
 Overall, we expect ARIMA to do good on longer sequences \cite{ho2021}. We expect RNNs to do the best with the low context of the third experiment \cite{Hansika}. Transformers should excel in higher context windows and fall slightly behind RNNs in the third experiment. Because of the short-term nature of the experiments, we expect ARIMA to be behind the other two models in all three experiments, given the low context.
-\subsection*{Results \textcolor{green}{Oscar}}
+\subsection*{Results}
 % (plots, statements of comparison (without committing to a full-depth comparison, thats in discussion) of all the experiments)
 From the results of the experiments, the ARIMA model has the worst performance, despite still having some correct predictions, it has the highest amount of false alarms in all 3 experiments compared to RNN and transformers, which have only a few. It would be better to exclude ARIMA from the comparison and talk about it later.
 
-\subsection*{Discussion \textcolor{violet}{Everyone discusses their experiment}}
+\subsection*{Discussion}
 % (discussing the results and comparing them and conclude on our hypothesis)
 
 The results of Experiment 1, in Figure 1, present a highly skewed report. In comparison, the RNN and the Transformers performed relatively similarly, with maybe slightly better overall performance on the part of the Transformers.
@@ -225,22 +225,22 @@ In Experiment 2, RNN and Transformers still perform similarly. While Transformer
 
 In the 3rd Experiment, where we used a shorter 7-day sliding window and a 3-day prediction horizon to test our models, the results closely aligned with our predictions. We can see that the RNN model performed exceptionally well, confirming the hypothesis that LSTM-based networks are still able to capture immediate dependencies in short sequences \cite{Hansika}. What's more, the Transformers model also maintained a high really close prediction accuracy. However, it did not surpass the RNN in this reduced timeframe. Finally, as expected, the ARIMA model continued generating several false alarms despite reducing the time frame. Overall, these results suggest that, even on short time frames,  neural network models are stronger than traditional linear models like ARIMA in quickly identifying abrupt fluctuations in financial time series (i.e. such as crashes).
 
-\subsection*{Conclusion \textcolor{red}{Inigo}}
+\subsection*{Conclusion}
 This empirical review project demonstrated that Recurrent Neural Networks (RNNs) and Transformer-based architectures consistently outperformed the ARIMA model in predicting financial crashes. Based on these results, we can affirm that RNNs and Transformers are better suited to capture the complex, non-linear relationships and long-range dependencies of financial time series, resulting in higher prediction accuracy of the crashes. In contrast, the ARIMA model, inherently based on linear assumptions, was  proved to be less effective in handling the volatile and non-linear nature of financial markets. Mathematically, a differenced series \((1-B)^d X_t\) is modelled as: \[ (1 - \varphi_1 B - \varphi_2 B^2 - \cdots - \varphi_p B^p)(1-B)^d X_t = (1 + \theta_1 B + \theta_2 B^2 + \cdots + \theta_q B^q)\varepsilon_t, \] where \(B\) is the backshift operator, \(\varphi_i\) and \(\theta_j\) are parameters, and \(\varepsilon_t\) is white noise. However, the ARIMA model, restricted by its linearity, assumed that the time series $X_t$ could be expressed as a linear function of its past values and past error terms and could not properly capture the sudden chaotic shifts and non-linear patterns of our financial data. Consequently, ARIMA’s linear structure leads to a less effective approximation compared to models better designed to handle non-linear patterns like RNNs or Transformers.
 
 
 
-\subsection*{Future Directions \textcolor{red}{Inigo}}
+\subsection*{Future Directions}
 While the superiority of Transformers and RNNs over ARIMA in predicting financial crashes is more than evident, ARIMA models could still be useful as a baseline, particularly in periods of relative market stability where linear dynamics are more pronounced. A potential avenue of improvement for this project could be to investigate the combination of RNNs/Transformers with ARIMA. For instance, during less turbulent intervals, the linear patterns captured by ARIMA can complement the non-linear adaptability of RNNs and Transformers. The linear and more conservative trend-following nature of ARIMA may be used to balance the overreaction of non-linear methods to short-term noise, decreasing false crash alarms. By intelligently combining these models, we could leverage ARIMA’s strengths for stable trend-like segments of the data while allowing more sophisticated architectures to handle the abrupt non-linear fluctuations. Regarding a more general improvement of the predictive power of our models, incorporating more macroeconomic indicators specific to each financial market and studying alternative data preprocessing techniques, such as feature engineering or advanced normalization schemes, may potentially lead to better results.
 
 
 
-\subsection*{Self-Assessment \textcolor{green}{Oscar}}
+\subsection*{Self-Assessment}
 % (how we feel about the project, what would we have done differently etc.)
 From the result of this project, the RNN and Transformer models produced promising results, demonstrating their capability to capture complex temporal dependencies and effectively model market patterns leading to crashes. However, due to the lack of knowledge in data science, the performance of the ARIMA model fell short of expectations. With more knowledge of the fundamentals of data science of preparing data and statistics, we can possibly transform the data to better fit the ARIMA model with different techniques and get better results.
 
 \pagebreak
-\subsection*{Contributions \textcolor{violet}{Everyone writes their own contribution}}
+\subsection*{Contributions}
 % contributions: contributions of each member to the report. If there is a disagreement, you can inlcude a longer contribution section in the appendix where each member explains their version.
 \begin{enumerate}
     \item Adrien - 
