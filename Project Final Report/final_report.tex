@@ -181,7 +181,7 @@ Our RNN code was based on the \textit{Keras} Sequential model, using the pre-mad
 The code used two LSTM layers of 50 units each, then a dense layer with a sigmoid activation layer for binary classification. We then used the adam optimizer with a binary cross-entropy loss function to train our binary model.
 
 \subsubsection*{ARIMA Implementation}
-
+Our ARIMA code uses the default ARIMA from \textbf{statsmodels}\cite{statsmodelsARIMA} without using trend nor seasonal feature of our data. We first uses ADF test to determine the stationarity of our data. It shows that our data is non-stationary therefore the differencing term $d$ is needed. Then we looked at the PACF for decision of $p$ and ACF for decision of $q$. From PACF, we can choose either $p=0$ or $p=1$. From ACF, it is hard to tell what should be used as $q$. Therefore we run the grid search to have the hyperparameters to ensure we have a high accuracy. 
 \subsubsection*{Transformers Implementation}
 
 \subsubsection*{Experiments}
