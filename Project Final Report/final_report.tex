@@ -5,6 +5,7 @@
 \usepackage{titling}
 \usepackage{enumitem}
 \usepackage{ragged2e}
+\usepackage{multicol}
 \usepackage{comment}
 \usepackage{xcolor}
 \usepackage[
@@ -71,74 +72,38 @@ Although the world of finance is changing, and there are no specific parameters 
     We are not the first to attempt to compare ML model's performance on their prediction of market crashes using SP500 historical data. 
     Multiple approaches have been tried and tested. Time series analysis has used ARIMA and RNN based models, with the more recent addition of Transformers boosting and improving their performance  \cite{Okpeke, Ahmed, ArunKumar}. 
     Reviews of these models have been done before, but the comparison of these three models on short-term prediction using very recent market data is lacking in the literature. 
-    
-    \ 
-    % COMPAre OTHER ARTICLES that did this
+    \\
+\\
+\begin{multicols}{2}
+One article compared Linear Regression and Autoregressive Moving Average (ARIMA) to predict the volatility and trend of SP500 \cite{sp500arimalstmregression}. 
+Key findings show that ARIMA struggled on short-term predictions, particularly during the 1930s and 2020 volatile markets.
 
-    One article compared Linear Regression and Autoregressive Moving Average (ARIMA) to predict the volatility and trend of SP500. \cite{sp500arimalstmregression}. 
-    Key-findings show that ARIMA struggled on short term predictions, particularly during the 1930s and 2020 volatile markets. 
-    
-    Zhou et al. demonstrated that transformers handle long-term dependencies well with the "Informer model," which efficiently handles long sequences and improves trend forecasting accuracy using a "self-attention" mechanism \cite{zhou2021informer}. Moreover, Lim et al. were even able to outperform traditional methods (like ARIMA) by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}. 
-    
-    Zhen Zeng studied the applicability of Transformers combined with RNNs in trend detection, specifically for financial time series, in his paper \cite{zeng2023financial}. He concluded that combining these two architectures significantly improved forecasting accuracy for intraday stock price movements of the SP500.
-    
-    \
-    % Explore definitions of market crashes and which data was used
+Zhou et al. demonstrated that Transformers handle long-term dependencies well with the "Informer model," which efficiently handles long sequences and improves trend forecasting accuracy using a "self-attention" mechanism \cite{zhou2021informer}. 
+Moreover, Lim et al. were even able to outperform traditional methods (like ARIMA) by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}.
 
-    Market Crashes do not hold a single definition. While historical data tags specific periods as depressions and bubbles, there are no specific metrics that are universally defined. Some have defined it as a rapid decline of 20\% or more from a recent peak over a short period \cite{Fonville, Investo}. Others still have defined them as a drawdown of 99.5\% quantile \cite{99.5quantile}.
-    
-    \
-    % Explore models implementation
-    %%% RNN
-    
-    Time series in the stock market often exhibit complex trends and non-linear patterns. 
-    Long Short-Term Memory (LSTM) Recurrent Neural Networks (RNN) are designed to learn long-term trends in sequential data, making them very good at modelling and forecasting financial market time series \cite{hochreiter1997, greff2017}.
+Zhen Zeng studied the applicability of Transformers combined with RNNs in trend detection, specifically for financial time series, in his paper \cite{zeng2023financial}. 
+He concluded that combining these two architectures significantly improved forecasting accuracy for intraday stock price movements of the SP500.
 
-    LSTM networks address the vanishing gradient problem encountered in standard RNNs on this type of data by introducing specialized LSTM cells. These cells incorporate gates to control flow, allowing LSTMs to forget and remember information over long sequences \cite{hochreiter1997}.
+Market Crashes do not hold a single definition. While historical data tags specific periods as depressions and bubbles, there are no specific metrics that are universally defined. Some have defined it as a rapid decline of 20\% or more from a recent peak over a short period \cite{Fonville, Investo}. Others still have defined them as a drawdown of 99.5\% quantile \cite{99.5quantile}.
 
-    The LSTM cell can be defined as in Appendix entry 5 \cite{hochreiter1997}:
+Time series in the stock market often exhibit complex trends and non-linear patterns. Long Short-Term Memory (LSTM) Recurrent Neural Networks (RNN) are designed to learn long-term trends in sequential data, making them very good at modelling and forecasting financial market time series \cite{hochreiter1997, greff2017}.
 
+LSTM networks address the vanishing gradient problem encountered in standard RNNs on this type of data by introducing specialized LSTM cells. These cells incorporate gates to control flow, allowing LSTMs to forget and remember information over long sequences \cite{hochreiter1997}. 
 
-The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-1}$ is retained. The \textit{input} gate $i_t$ updates the cell with new information. The \textit{output} gate $o_t$ controls the hidden state, which is the LSTM output at time $t$ \cite{hochreiter1997}.
+Time series in the stock market are non-stationary, which means that their statistical properties (e.g., average, median) change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}. A methodology formalized by Box et al. in 2015 to apply the ARIMA model with a moving average component \cite{box2015}. 
 
+Transformers are based on self-attention mechanisms. They weigh the importance of input elements by computing \textit{attention scores}. While originally developed for natural language processing tasks, Transformers have become popular for time-series forecasting due to their ability to handle long-range dependencies \cite{vaswani2017attention}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-    \
-    
-    %%% ARIMA
-    Time series in the stock market are non-stationary, which means that their statistical properties (Avg, median) change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}. A methodology formalized by Box et Al. in 2015 to apply the ARIMA model with a moving average component \cite{box2015}.
-    This makes ARIMA suitable for predicting non-stationary time series, such as financial markets, as demonstrated by M. K. Ho et al. in their paper \cite{ho2021}.
-    The ARIMA model's Mathematical definition can be found in Appendix Entry 6\cite{box2015}:
-
-    The use of ACF (autocorrelation function) and PACF (partial ACF) will help us decide the hyperparameters $p, d, q$ for building our model \cite{hyndman2018}, and performing Grid-Search on the specific hyperparameters will help us pinpoint the exact best accuracy we can get.
-    
-    \
-
-    %%% TRANSFORMERS
-    Transformers are based on self-attention mechanisms. They are able to weigh the importance of input elements by computing \textit{attention scores}.
-    While transformers were originally developed for natural language processing tasks, they have become popular for time-series forecasting due to their ability to handle long-range dependencies \cite{vaswani2017attention}.
+Drastic market crashes are rare. Models can achieve extremely high accuracy by simply predicting no market crash for every data point \cite{market_infrequent}. Other methods are thus needed to evaluate the models. Some use true positives and true negatives \cite{true_positive}, others mean absolute error (MAE) \cite{hyndman2018}, and some evaluate runtime and resource usage for practical feasibility \cite{lim2021temporal}.
+\end{multicols}
 
 
 
-    Unlike RNNs, Transformers process all steps at the same time, enabling parallel computation and improved efficiency for long-range dependency learning \cite{vaswani2017attention}.
 
-The core attention scoring by scaled dot product's definition can be found in Appendix entry 6 \cite{vaswani2017attention}.
 
-Transformers eliminate the need for recurrent connections by relying entirely on attention mechanisms. This allows them to model long-range dependencies more effectively than RNNs, which sometimes struggle with sequential bottlenecks and vanishing gradients \cite{vaswani2017attention}.
 
-While originally developed for natural language processing tasks, Transformers have been increasingly applied to time-series forecasting \cite{zeng2023financial}.
-Given the volatility and complexity of financial markets, their ability to capture complex patterns makes them an ideal choice for financial market forecasting \cite{wu2020deep}.
-
-\
-
-% Explore analysis criteria 
-    Drastic market crashes are rare. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint \cite{market_infrequent}. Other methods are thus needed to evaluate the models. Others in literature have used many methods, such as evaluating true positives and true negatives \cite{true_positive}. Others have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
-
-\subsection*{Methodology}
-% (Our models and market crash definition, how they work, why we chose them, the experiments we chose and why we chose them) + HYPOTHESIS on each experiment
+\subsection*{Methodology, Definitions and Metrics used in our project}
 Note: All code can be found in the gitHub repository linked in the Appendix.
-\subsubsection*{Definitions and Metrics used in our project}
-
 For our project, we use an LSTM-based RNN, Transformers and ARIMA to predict whether there will be a crash in the next x days based on the past y days. We defined a crash as a 99.5\% quantile drawdown within a day. This gave us around 26 crashes in the test data.
 
 To evaluate our models, we will measure the number of Predicted crashes against the real number of crashes. We will also check the number of false alarms and missed crashes. Finally, we will evaluate the training and resource usage time of all three models for each experiment.
@@ -169,11 +134,9 @@ For our Transformer-based neural network architecture, we defined a positional e
 
     
 Overall, we expect ARIMA to do good on longer sequences \cite{ho2021}. We expect RNNs to do the best with the low context of the third experiment \cite{Hansika}. Transformers should excel in higher context windows and fall slightly behind RNNs in the third experiment. Because of the short-term nature of the experiments, we expect ARIMA to be behind the other two models in all three experiments, given the low context.
-\subsection*{Results}
-% (plots, statements of comparison (without committing to a full-depth comparison, thats in discussion) of all the experiments)
-From the results of the experiments, the ARIMA model has the worst performance, despite still having some correct predictions, it has the highest amount of false alarms in all 3 experiments compared to RNN and transformers, which have only a few. It would be better to exclude ARIMA from the comparison and talk about it later.
 
-\subsection*{Discussion}
+
+\subsection*{Results \& Discussion}
 % (discussing the results and comparing them and conclude on our hypothesis)
 
 The results of Experiment 1, in Figure 1, present a highly skewed report. In comparison, the RNN and the Transformers performed relatively similarly, with maybe slightly better overall performance on the part of the Transformers.
