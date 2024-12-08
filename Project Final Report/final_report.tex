@@ -195,6 +195,7 @@ For our Transformer-based neural network architecture, we defined a positional e
             Hypothesis: Here, we expect Transformers to profit from the larger sliding window, surpassing the performance of RNNs \cite{greff2017, sp500arimalstmregression}. We expect ARIMA to have the best performance of all three experiments in this one, as it has the most context and does better with more data \cite{ho2021}.
         \item Oscar - 14 days sliding window, 7 days shift days
         \item Inigo - 7 days sliding window, 3 days shift days
+            Hypothesis: Our belief in this experiment is that LSTM (Long Short Term Memory) based RNN models will excel due to their capability to handle shorter sequences and identify immediate dependencies effectively, as Hewamalage et al. demonstrated \cite{Hansika}: RNN architectures, and specially LSTMs can adapt well to limited sequential data, and still be able to learn patterns from it. Thus, we expect a superior performance of RNNs, followed by Transformer and ARIMA respectively
     \end{enumerate}
 
     
