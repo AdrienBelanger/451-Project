@@ -184,7 +184,9 @@ The code used two LSTM layers of 50 units each, then a dense layer with a sigmoi
 
 \subsubsection*{ARIMA Implementation}
 Our ARIMA code uses the default ARIMA from \textbf{statsmodels}\cite{statsmodelsARIMA} without using trend nor seasonal feature of our data. We first uses ADF test to determine the stationarity of our data. It shows that our data is non-stationary therefore the differencing term $d$ is needed. Then we looked at the PACF for decision of $p$ and ACF for decision of $q$. From PACF, we can choose either $p=0$ or $p=1$. From ACF, it is hard to tell what should be used as $q$. Therefore we run the grid search to have the hyperparameters to ensure we have a high accuracy. 
+
 \subsubsection*{Transformers Implementation}
+For our Transformer-based neural network architecture, we defined a positional encoding function (\texttt{positional\_encoding}), introducing a temporal order understanding that Transformers inherently lack. The \texttt{transformer\_model} function then constructs a model configured to accept time-series data (i.e. normalized closing prices or market indicators over a specified look-back window). Each input sequence is passed through a dense embedding layer (\texttt{Dense(embed\_dim)(x)}) and augmented with positional encodings. This enables the model to capture temporal trends more effectively. Next, a Multi-Head Attention layer selectively focuses on different parts of the input sequence, while skip connections and \texttt{LayerNormalization()} stabilize learning. The attended information is refined by a feed-forward network (Dense layers), then flattened and passed through a final sigmoid-activated layer for binary crash predictions. Finally, the model is compiled with a binary cross-entropy loss and accuracy metric to evaluate its performance on historical financial data.
 
 \subsubsection*{Experiments}
     \begin{enumerate}
