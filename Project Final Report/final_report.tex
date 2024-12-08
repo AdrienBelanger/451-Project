@@ -96,23 +96,8 @@ Although the world of finance is changing, and there are no specific parameters 
 
     LSTM networks address the vanishing gradient problem encountered in standard RNNs on this type of data by introducing specialized LSTM cells. These cells incorporate gates to control flow, allowing LSTMs to forget and remember information over long sequences \cite{hochreiter1997}.
 
-    The LSTM cell can be defined as follows \cite{hochreiter1997}:
+    The LSTM cell can be defined as in Appendix entry 5 \cite{hochreiter1997}:
 
-\begin{align*} 
-    i_t &= \sigma(W_i x_t + U_i h_{t-1} + b_i), \\ f_t &= \sigma(W_f x_t + U_f h_{t-1} + b_f), \\ o_t &= \sigma(W_o x_t + U_o h_{t-1} + b_o), \\ \tilde{c}t &= \tanh(W_c x_t + U_c h{t-1} + b_c), \\ c_t &= f_t \cdot c_{t-1} + i_t \cdot \tilde{c}_t, \\ h_t &= o_t \cdot \tanh(c_t), 
-\end{align*}
-
-where
-
-\begin{enumerate}[label=-]
-    \item $x_t$ is the input at time $t$, representing market data (e.g., stock price, volume),
-    \item $h_{t-1}$ is the hidden state (output) of the previous time step,
-    \item $i_t$, $f_t$, $o_t$ are the input gate, forget gate, and output gate
-    \item $\tilde{c}_t$ is the candidate memory cell state,
-    \item $c_t$ is the cell state at time $t$, capturing long-term dependencies,
-    \item $W$ and $U$ are the weight matrices and b is the bias vector,
-    \item $\sigma$ is the sigmoid activation function
-\end{enumerate}
 
 The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-1}$ is retained. The \textit{input} gate $i_t$ updates the cell with new information. The \textit{output} gate $o_t$ controls the hidden state, which is the LSTM output at time $t$ \cite{hochreiter1997}.
 
@@ -123,19 +108,7 @@ The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-
     %%% ARIMA
     Time series in the stock market are non-stationary, which means that their statistical properties (Avg, median) change over time. ARIMA models can be adapted to capture the behavior of non-stationary time-series \cite{ho2021}. A methodology formalized by Box et Al. in 2015 to apply the ARIMA model with a moving average component \cite{box2015}.
     This makes ARIMA suitable for predicting non-stationary time series, such as financial markets, as demonstrated by M. K. Ho et al. in their paper \cite{ho2021}.
-    The ARIMA model is defined mathematically as \cite{box2015}:
-    {\small
-    \begin{align*}
-        \varphi (B) z_t = \phi (B)\nabla^d z_t = \theta_0 + \theta (B)a_t
-    \end{align*}
-    where
-    \begin{enumerate}[label=-]
-        \item $\phi(B)$ is the autoregressive part with $p$ degrees,
-        \item $\theta (B)$ is the moving average part with $q$ degrees,
-        \item $\nabla$ is the integrated (degree of differencing) part with $d$ degrees,
-        \item and $\theta_0$ is the constant term.
-    \end{enumerate}
-    }
+    The ARIMA model's Mathematical definition can be found in Appendix Entry 6\cite{box2015}:
 
     The use of ACF (autocorrelation function) and PACF (partial ACF) will help us decide the hyperparameters $p, d, q$ for building our model \cite{hyndman2018}, and performing Grid-Search on the specific hyperparameters will help us pinpoint the exact best accuracy we can get.
     
@@ -149,13 +122,7 @@ The \textit{forget} gate, $f_t$, determines how much of the previous cell $c_{t-
 
     Unlike RNNs, Transformers process all steps at the same time, enabling parallel computation and improved efficiency for long-range dependency learning \cite{vaswani2017attention}.
 
-The core attention scoring by scaled dot product is defined as \cite{vaswani2017attention}:
-{\small \begin{align*} \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V, \end{align*} }
-where:
-\begin{enumerate}[label=-] \item $Q$ (queries), $K$ (keys), and $V$ (values) are linear projections of the input data,
-\item  is the dimension of the key vectors,
-\item The softmax function ensures that attention scores are normalized.
-\end{enumerate}
+The core attention scoring by scaled dot product's definition can be found in Appendix entry 6 \cite{vaswani2017attention}.
 
 Transformers eliminate the need for recurrent connections by relying entirely on attention mechanisms. This allows them to model long-range dependencies more effectively than RNNs, which sometimes struggle with sequential bottlenecks and vanishing gradients \cite{vaswani2017attention}.
 
@@ -176,22 +143,18 @@ For our project, we use an LSTM-based RNN, Transformers and ARIMA to predict whe
 
 To evaluate our models, we will measure the number of Predicted crashes against the real number of crashes. We will also check the number of false alarms and missed crashes. Finally, we will evaluate the training and resource usage time of all three models for each experiment.
 
-\subsubsection*{Database and preprocessing}
+\subsubsection*{Database, preprocessing and Models}
 
 We pulled the code from the SP500 public data available on the Yahoo Finance financial data library. From there, we preprocessed the code by labelling crashes in the database.
 
 Our code made use of a sliding window for the sequence length. Then, we created batches of data points of size 20. We then tried to predict if there would be a crash in the following shift days, which was a hyperparameter. For example, we could have a 15-day sliding window to predict if there would be a crash in the 3 days after those 15 days. 
 This made the problem one of binary classification, which was simple and efficient to process and made for easy comparison.
 
-\subsubsection*{RNN Implementation}
-
 Our RNN code was based on the \textit{Keras} Sequential model, using the pre-made LSTM layers \cite{keras2024lstm,keras2024sequential}. This was used since our project aimed to be a comparison and not one of implementation. 
 The code used two LSTM layers of 50 units each, then a dense layer with a sigmoid activation layer for binary classification. We then used the Adam optimizer with a binary cross-entropy loss function to train our binary model.
 
-\subsubsection*{ARIMA Implementation}
 Our ARIMA code uses the default ARIMA from \textbf{statsmodels}\cite{statsmodelsARIMA} without using trend nor seasonal features of our data. We first use the ADF test to determine the stationarity of our data. It shows that our data is non-stationary, and therefore, the differencing term $d$ is needed. Then, we looked at the PACF for the decision of $p$ and ACF for the decision of $q$. From PACF, we can choose either $p=0$ or $p=1$. From ACF, it is hard to tell what should be used as $q$. Therefore, we run the grid search to have the hyperparameters to ensure we have a high accuracy. 
 
-\subsubsection*{Transformers Implementation}
 For our Transformer-based neural network architecture, we defined a positional encoding function (\texttt{positional\_encoding}), introducing a temporal order understanding that Transformers inherently lack. The \texttt{transformer\_model} function then constructs a model configured to accept time-series data (i.e. normalized closing prices or market indicators over a specified look-back window). Each input sequence is passed through a dense embedding layer (\texttt{Dense(embed\_dim)(x)}) and augmented with positional encodings. This enables the model to capture temporal trends more effectively. Next, a Multi-Head Attention layer selectively focuses on different parts of the input sequence, while skip connections and \texttt{LayerNormalization()} stabilize learning. The attended information is refined by a feed-forward network (Dense layers), then flattened and passed through a final sigmoid-activated layer for binary crash predictions. Finally, the model is compiled with a binary cross-entropy loss and accuracy metric to evaluate its performance on historical financial data.
 
 \subsubsection*{Experiments}
@@ -226,7 +189,8 @@ In Experiment 2, RNN and Transformers still perform similarly. While Transformer
 In the 3rd Experiment, where we used a shorter 7-day sliding window and a 3-day prediction horizon to test our models, the results closely aligned with our predictions. We can see that the RNN model performed exceptionally well, confirming the hypothesis that LSTM-based networks are still able to capture immediate dependencies in short sequences \cite{Hansika}. What's more, the Transformers model also maintained a high really close prediction accuracy. However, it did not surpass the RNN in this reduced timeframe. Finally, as expected, the ARIMA model continued generating several false alarms despite reducing the time frame. Overall, these results suggest that, even on short time frames,  neural network models are stronger than traditional linear models like ARIMA in quickly identifying abrupt fluctuations in financial time series (i.e. such as crashes).
 
 \subsection*{Conclusion}
-This empirical review project demonstrated that Recurrent Neural Networks (RNNs) and Transformer-based architectures consistently outperformed the ARIMA model in predicting financial crashes. Based on these results, we can affirm that RNNs and Transformers are better suited to capture the complex, non-linear relationships and long-range dependencies of financial time series, resulting in higher prediction accuracy of the crashes. In contrast, the ARIMA model, inherently based on linear assumptions, was  proved to be less effective in handling the volatile and non-linear nature of financial markets. Mathematically, a differenced series \((1-B)^d X_t\) is modelled as: \[ (1 - \varphi_1 B - \varphi_2 B^2 - \cdots - \varphi_p B^p)(1-B)^d X_t = (1 + \theta_1 B + \theta_2 B^2 + \cdots + \theta_q B^q)\varepsilon_t, \] where \(B\) is the backshift operator, \(\varphi_i\) and \(\theta_j\) are parameters, and \(\varepsilon_t\) is white noise. However, the ARIMA model, restricted by its linearity, assumed that the time series $X_t$ could be expressed as a linear function of its past values and past error terms and could not properly capture the sudden chaotic shifts and non-linear patterns of our financial data. Consequently, ARIMA’s linear structure leads to a less effective approximation compared to models better designed to handle non-linear patterns like RNNs or Transformers.
+This empirical review project demonstrated that Recurrent Neural Networks (RNNs) and Transformer-based architectures consistently outperformed the ARIMA model in predicting financial crashes. Based on these results, we can affirm that RNNs and Transformers are better suited to capture the complex, non-linear relationships and long-range dependencies of financial time series, resulting in higher prediction accuracy of the crashes. In contrast, the ARIMA model, inherently based on linear assumptions, was  proved to be less effective in handling the volatile and non-linear nature of financial markets. Mathematically, a differenced series \((1-B)^d X_t\) is modelled as in Appendix Entry 7. 
+However, the ARIMA model, restricted by its linearity, assumed that the time series $X_t$ could be expressed as a linear function of its past values and past error terms and could not properly capture the sudden chaotic shifts and non-linear patterns of our financial data. Consequently, ARIMA’s linear structure leads to a less effective approximation compared to models better designed to handle non-linear patterns like RNNs or Transformers.
 
 
 
@@ -286,6 +250,51 @@ From the result of this project, the RNN and Transformer models produced promisi
         \end{subfigure}
         \hfill
     \end{figure}
+
+    \item LSTM Cell Equation
+    \begin{align*} 
+        i_t &= \sigma(W_i x_t + U_i h_{t-1} + b_i), \\ f_t &= \sigma(W_f x_t + U_f h_{t-1} + b_f), \\ o_t &= \sigma(W_o x_t + U_o h_{t-1} + b_o), \\ \tilde{c}t &= \tanh(W_c x_t + U_c h{t-1} + b_c), \\ c_t &= f_t \cdot c_{t-1} + i_t \cdot \tilde{c}_t, \\ h_t &= o_t \cdot \tanh(c_t), 
+    \end{align*}
+    
+    where
+    
+    \begin{enumerate}[label=-]
+        \item $x_t$ is the input at time $t$, representing market data (e.g., stock price, volume),
+        \item $h_{t-1}$ is the hidden state (output) of the previous time step,
+        \item $i_t$, $f_t$, $o_t$ are the input gate, forget gate, and output gate
+        \item $\tilde{c}_t$ is the candidate memory cell state,
+        \item $c_t$ is the cell state at time $t$, capturing long-term dependencies,
+        \item $W$ and $U$ are the weight matrices and b is the bias vector,
+        \item $\sigma$ is the sigmoid activation function
+    \end{enumerate}
+
+    \item ARIMA model definition:
+    The ARIMA model is defined mathematically as \cite{box2015}:
+    {\small
+    \begin{align*}
+        \varphi (B) z_t = \phi (B)\nabla^d z_t = \theta_0 + \theta (B)a_t
+    \end{align*}
+    where
+    \begin{enumerate}[label=-]
+        \item $\phi(B)$ is the autoregressive part with $p$ degrees,
+        \item $\theta (B)$ is the moving average part with $q$ degrees,
+        \item $\nabla$ is the integrated (degree of differencing) part with $d$ degrees,
+        \item and $\theta_0$ is the constant term.
+    \end{enumerate}
+    }
+    
+    \item Transformers Attention Scoring function
+    {\small \begin{align*} \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V, \end{align*} }
+    {\small \begin{align*} \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V, \end{align*} }
+    where:
+    \begin{enumerate}[label=-] \item $Q$ (queries), $K$ (keys), and $V$ (values) are linear projections of the input data,
+    \item  is the dimension of the key vectors,
+    \item The softmax function ensures that attention scores are normalized.
+    \end{enumerate}
+
+    \item Differenced Series
+    \[ (1 - \varphi_1 B - \varphi_2 B^2 - \cdots - \varphi_p B^p)(1-B)^d X_t = (1 + \theta_1 B + \theta_2 B^2 + \cdots + \theta_q B^q)\varepsilon_t, \] where \(B\) is the backshift operator, \(\varphi_i\) and \(\theta_j\) are parameters, and \(\varepsilon_t\) is white noise. 
+    
 \end{enumerate}
 
 \printbibliography
