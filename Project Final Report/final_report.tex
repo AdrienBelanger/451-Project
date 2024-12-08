@@ -66,7 +66,7 @@ Although the world of finance is changing, and there are no specific parameters 
 
 
 
-\subsection*{Litterature Review \textcolor{cyan}{Adrien}}
+\subsection*{Background \& Litterature Review \textcolor{cyan}{Adrien}}
 % (Where does our project fit in context of  other articles)
     We are not the first to attempt to compare ML models performance on their prediction of market crashes using SP500 historical data. 
     Multiple approaches have been tried and tested. Time series analysis has used ARIMA and RNN based models, with the more recent addition of Transformers boosting and improving their performance  \cite{Okpeke, Ahmed, ArunKumar}. 
@@ -198,7 +198,7 @@ For our Transformer-based neural network architecture, we defined a positional e
     \begin{enumerate}
         \item 30 days sliding window, 14 days shift days\\
             Hypothesis: Here, we expect Transformers to profit from the larger sliding window, surpassing the performance of RNNs \cite{greff2017, sp500arimalstmregression}. We expect ARIMA to have the best performance of all three experiments in this one, as it has the most context and does better with more data \cite{ho2021}.
-        \item 15 days sliding window, 7 days shift days
+        \item 15 days sliding window, 7 days shift days\\
             Hypothesis: We expect that both Transformers and RNN to perform comparably by utilizing their strength in capturing medium range dependencies. Meanwhile ARIMA may also deliver reasonable results, as the window provides sufficient context for traditional statistical modeling.
         \item 7 days sliding window, 3 days shift days\\
             Hypothesis: Our belief in this experiment is that LSTM (Long Short Term Memory) based RNN models will excel due to their capability to handle shorter sequences and identify immediate dependencies effectively, as Hewamalage et al. demonstrated \cite{Hansika}: RNN architectures, and specially LSTMs can adapt well to limited sequential data, and still be able to learn patterns from it. Thus, we expect a superior performance of RNNs, followed by Transformer and ARIMA respectively.
