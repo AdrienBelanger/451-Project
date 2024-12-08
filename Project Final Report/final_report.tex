@@ -18,7 +18,7 @@ sorting=none,
 \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \usepackage{subcaption}
 \usepackage{float}
-
+\setlength{\parindent}{0pt}
 
 
 
@@ -69,18 +69,20 @@ Although the world of finance is changing, and there are no specific parameters 
 \subsection*{Litterature Review \textcolor{cyan}{Adrien}}
 % (Where does our project fit in context of  other articles)
     We are not the first to attempt to compare ML models performance on their prediction of market crashes using SP500 historical data. Multiple approaches have been tried and tested. Time series analysis has used ARIMA and RNN based models, with the more recent addition of Transformers boosting and improving their performance  \cite{Okpeke, Ahmed, ArunKumar}. Reviews of these models have been done before, but the comparison of these three models on short-term prediction using very recent market data is lacking in litterature. 
-    \paragraph*{}
+    \newline
     % COMPAre OTHER ARTICLES that did this
+
     One article compared Linear Regression and Autoregressive Moving Average (ARIMA) to predict the volatility and trend of SP500. \cite{sp500arimalstmregression}. 
     Key-findings show that ARIMA struggled on short term predictions, particularly during the 1930s and 2020 volatile markets. 
     
     Zhou et al. demonstrated that transformers handle long-term dependencies well with the "Informer model," which efficiently handles long sequences and improves trend forecasting accuracy using a "self-attention" mechanism \cite{zhou2021informer}. Moreover, Lim et al. were even able to outperform traditional methods (like ARIMA) by combining the Transformer architecture with recurrent layers \cite{lim2021temporal}. 
     
     Zhen Zeng studied the applicability of Transformers combined with RNNs in trend detection specifically for financial time series in his paper \cite{zeng2023financial}. He concluded that combining these two architectures significantly improved forecasting accuracy for intraday stock price movements of the SP500.
-    \paragraph*{}
+    \newline
     % Explore definitions of market crashes and which data was used
+
     Market Crashes do not hold a single definition. While historical data tags specific periods as depressions and bubbles, there are no specific metrics that are universally defined. Some have defined it as a rapid decline of 20\% or more from a recent peak over a short period \cite{Fonville, Investo}. Others still have defined them as a drawdown of 99.5\% quantile \cite{99.5quantile}.
-    \paragraph*{}
+    \newline
     % Explore models implementation
     %%% RNN
     
@@ -154,8 +156,8 @@ Transformers eliminate the need for recurrent connections by relying entirely on
 
 While originally developed for natural language processing tasks, Transformers have been increasingly applied to time-series forecasting \cite{zeng2023financial}.
 Given the volatility and complexity of financial markets, their ability to capture complex patterns makes them an ideal choice for financial market forecasting \cite{wu2020deep}.
+\newline
 
-\paragraph*{}
 % Explore analysis criteria 
     Drastic market crashes are rare. Models can achieve extremely high accuracy by simply predicting no market crash for every datapoint \cite{market_infrequent}. Other methods are thus needed to evaluate the models. Others in litterature have used many methods, such as evaluating true positives and true negatives \cite{true_positive}. Other have used mean absolute error (MAE) to assess prediction accuracy \cite{hyndman2018}. Finally, some have used runtime and resource usage for practical feasibility to assess their performance \cite{lim2021temporal}.
 
